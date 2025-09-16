@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "service": "Our Services",
+    "gallery": "Gallery",
+    "faq": "FAQ's",
+    "contact": "Contact"
+  },
+  "stats": {
+    "student": "Students Placed",
+    "university": "Partner Universities",
+    "rate": "Success Rate"
+  },
+  "home": {
+    "hero": {
+      "heading": "Welcome to SEMLA",
+      "subheading": "Guiding students to achieve their dreams of studying abroad with expert counseling, trusted guidance, and personalized support every step of the way.",
+      "btn1": "Start Your Journey",
+      "btn2": "Watch Our Story"
+    }
+  },
+  "about": {
+    "hero": {
+      "heading": "About Smela Educational Consultancy",
+      "subheading": "Helping students achieve their dream of studying in Japan with expert guidance and end-to-end support."
+    }
+  },
+  "services": {
+    "hero": {
+      "heading": "Our Services & Expertise",
+      "subheading": "Providing comprehensive guidance for students aspiring to study in Japan, including admissions support, visa assistance, and personalized counseling."
+    }
+  },
+  "gallery": {
+    "hero": {
+      "heading": "Our Gallery",
+      "subheading": "Explore our collection of unforgettable moments and experiences."
+    }
+  },
+  "contact": {
+    "hero": {
+      "heading": "Get in Touch with Us",
+      "subheading": "Reach out to Smela Educational Consultancy for expert guidance on studying in Japan. We're here to answer your questions and assist you every step of the way."
+    }
+  },
+  "faq": {
+    "hero": {
+      "heading": "Frequently Asked Questions",
+      "subheading": "Everything you need to know about studying in Japan – from courses and universities to visas."
+    }
+  }
+}
