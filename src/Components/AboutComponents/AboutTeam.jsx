@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const TeamCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const { t } = useTranslation();
   const teamData = [
     {
       id: 1,
@@ -111,11 +112,10 @@ const TeamCarousel = () => {
         {/* Header Section */}
         <div className="mb-16 text-center">
           <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
-            Meet Our Team
+            {t("about.team.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Our success stems from the diverse talents and passionate dedication
-            of each team member. Together, we create extraordinary experiences.
+            {t("about.team.subtitle")}
           </p>
         </div>
 

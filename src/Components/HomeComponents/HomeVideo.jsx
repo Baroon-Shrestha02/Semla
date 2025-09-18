@@ -320,7 +320,7 @@ export default function HomeVideo() {
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%,
           100% {

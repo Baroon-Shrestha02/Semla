@@ -2,44 +2,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { Award, Users, Globe, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const reasons = [
-  {
-    id: 1,
-    title: "Expert Counselors",
-    description:
-      "Experienced team providing personalized guidance with deep industry knowledge",
-    icon: Users,
-    position: "left",
-    delay: 0.1,
-  },
-  {
-    id: 2,
-    title: "Global Network",
-    description: "Connected with 200+ universities worldwide across the globe",
-    icon: Globe,
-    position: "left",
-    delay: 0.3,
-  },
-  {
-    id: 3,
-    title: "95% Success Rate",
-    description:
-      "Proven track record with thousands of successful placements worldwide",
-    icon: Award,
-    position: "right",
-    delay: 0.2,
-  },
-  {
-    id: 4,
-    title: "Comprehensive Services",
-    description:
-      "End-to-end support from career counseling to post-arrival assistance",
-    icon: BookOpen,
-    position: "right",
-    delay: 0.4,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ReasonCard = ({ reason, index }) => {
   const ref = React.useRef(null);
@@ -143,6 +106,43 @@ export default function HomeWhy() {
   const headerRef = React.useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, threshold: 0.3 });
 
+  const { t } = useTranslation();
+
+  const reasons = [
+    {
+      id: 1,
+      title: t("home.why.reasons.1.title"),
+      description: t("home.why.reasons.1.description"),
+      icon: BookOpen,
+      position: "left",
+      delay: 0.1,
+    },
+    {
+      id: 2,
+      title: t("home.why.reasons.2.title"),
+      description: t("home.why.reasons.2.description"),
+      icon: Award,
+      position: "left",
+      delay: 0.3,
+    },
+    {
+      id: 3,
+      title: t("home.why.reasons.3.title"),
+      description: t("home.why.reasons.3.description"),
+      icon: Users,
+      position: "right",
+      delay: 0.2,
+    },
+    {
+      id: 4,
+      title: t("home.why.reasons.4.title"),
+      description: t("home.why.reasons.4.description"),
+      icon: Globe,
+      position: "right",
+      delay: 0.4,
+    },
+  ];
+
   const leftReasons = reasons.filter((reason) => reason.position === "left");
   const rightReasons = reasons.filter((reason) => reason.position === "right");
 
@@ -224,14 +224,14 @@ export default function HomeWhy() {
           className="text-center mb-12 md:mb-16 lg:mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3 md:mb-4">
-            Why trust
+            {t("home.why.title")}
             <span className="bg-primary text-secondary px-4 py-1 rounded-full inline-block -rotate-4">
               SEMLA
             </span>
             ?
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">
-            Discover what makes us the preferred choice for students worldwide
+            {t("home.why.subtitle")}
           </p>
         </motion.div>
 
@@ -248,7 +248,7 @@ export default function HomeWhy() {
             <div className="flex items-center justify-center">
               <Link to="/about">
                 <button className="bg-primary text-secondary font-bold text-xl px-4 py-2 rounded-xl">
-                  Learn More About Us
+                  {t("home.why.btn")}
                 </button>
               </Link>
             </div>
@@ -328,7 +328,9 @@ export default function HomeWhy() {
                   className="absolute -top-4 -left-8 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100"
                 >
                   <div className="text-blue-600 font-bold text-lg">10+</div>
-                  <div className="text-gray-600 text-xs">Universities</div>
+                  <div className="text-gray-600 text-xs">
+                    {t("stats.university")}
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -345,7 +347,9 @@ export default function HomeWhy() {
                   className="absolute -top-2 -right-6 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-emerald-100"
                 >
                   <div className="text-emerald-600 font-bold text-lg">500+</div>
-                  <div className="text-gray-600 text-xs">Students</div>
+                  <div className="text-gray-600 text-xs">
+                    {t("stats.student")}
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -362,7 +366,7 @@ export default function HomeWhy() {
                   className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100"
                 >
                   <div className="text-purple-600 font-bold text-lg">98%</div>
-                  <div className="text-gray-600 text-xs">Success Rate</div>
+                  <div className="text-gray-600 text-xs">{t("stats.rate")}</div>
                 </motion.div>
               </div>
 
@@ -381,7 +385,7 @@ export default function HomeWhy() {
                 >
                   {/* Button text */}
                   <span className="relative z-10 flex items-center gap-2 px-6 py-1 rounded-2xl bg-primary text-secondary transition-all duration-300 transform hover:scale-105">
-                    Learn more about us
+                    {t("home.why.btn")}
                     <motion.span
                       animate={{ x: [0, 4, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}

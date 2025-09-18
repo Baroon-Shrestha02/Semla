@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function HomeIntro() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-6">
@@ -21,8 +23,8 @@ export default function HomeIntro() {
               viewport={{ once: true }}
               className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
             >
-              Your Gateway to{" "}
-              <span className="text-primary">Global Education</span>
+              {t("home.intro.title1")}{" "}
+              <span className="text-primary">{t("home.intro.title2")}</span>
             </motion.h1>
 
             {/* Description */}
@@ -33,11 +35,9 @@ export default function HomeIntro() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 leading-relaxed"
             >
-              Semla Consultancy is your trusted partner in navigating the
-              complex world of international education. We specialize in helping
-              students achieve their academic dreams by providing expert
-              guidance, personalized support, and comprehensive services for
-              university applications worldwide.
+              {t("home.intro.subtitle1")}{" "}
+              <span className="font-semibold">{t("home.intro.boldsub")}</span>,{" "}
+              {t("home.intro.subtitle2")}
             </motion.p>
 
             {/* Features List */}
@@ -62,9 +62,7 @@ export default function HomeIntro() {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-700">
-                  Expert guidance for top universities worldwide
-                </span>
+                <span className="text-gray-700">{t("home.intro.point1")}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
@@ -80,9 +78,7 @@ export default function HomeIntro() {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-700">
-                  Personalized application strategy and support
-                </span>
+                <span className="text-gray-700">{t("home.intro.point2")}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
@@ -98,9 +94,7 @@ export default function HomeIntro() {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-700">
-                  Visa assistance and pre-departure guidance
-                </span>
+                <span className="text-gray-700">{t("home.intro.point3")}</span>
               </div>
             </motion.div>
 
@@ -113,10 +107,10 @@ export default function HomeIntro() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="px-8 py-4 bg-primary text-secondary font-bold transition-all duration-300 transform hover:scale-105 shadow-lg rounded-lg">
-                Get Started Today
+                {t("home.intro.btn1")}
               </button>
               <button className="px-8 py-4 border-2 border-secoandary text-secondary font- rounded-lg hover:border-green-600 hover:text-green-600 transition-all duration-300">
-                Learn More
+                {t("home.intro.btn2")}
               </button>
             </motion.div>
 
@@ -170,9 +164,11 @@ export default function HomeIntro() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">
-                      Success Rate
+                      {t("stats.rate")}
                     </div>
-                    <div className="text-sm text-gray-600">95% Acceptance</div>
+                    <div className="text-sm text-gray-600">
+                      95% {t("home.intro.accept")}
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -186,16 +182,20 @@ export default function HomeIntro() {
               className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">10,000+</div>
-                <div className="text-sm text-gray-600">Students Helped</div>
+                <div className="text-2xl font-bold text-gray-900">5000+</div>
+                <div className="text-sm text-gray-600">
+                  {t("stats.student")}
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">95%</div>
-                <div className="text-sm text-gray-600">Success Rate</div>
+                <div className="text-2xl font-bold text-gray-900">98%</div>
+                <div className="text-sm text-gray-600">{t("stats.rate")}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">50+</div>
-                <div className="text-sm text-gray-600">Countries</div>
+                <div className="text-2xl font-bold text-gray-900">10+</div>
+                <div className="text-sm text-gray-600">
+                  {t("stats.university")}
+                </div>
               </div>
             </motion.div>
           </motion.div>

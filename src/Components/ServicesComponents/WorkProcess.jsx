@@ -60,7 +60,7 @@ const processSteps = [
       "Placement Strategy",
     ],
     highlights: ["Flexible options", "Targeted guidance", "Maximize success"],
-    image: "services/ser3.jpg",
+    image: "services/program.webp",
   },
   {
     id: 4,

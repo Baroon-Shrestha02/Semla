@@ -107,8 +107,8 @@ export default function HomeSocial() {
               }`}
             >
               <p className="text-lg text-gray-600 leading-relaxed max-w-md">
-                KIEC looks ahead with an expanded vision to be students'
-                lifelong launch pad for realizing their highest potential.
+                Semla looks ahead with an expanded vision to be your lifelong
+                launch pad for realizing their highest potential.
               </p>
             </div>
 

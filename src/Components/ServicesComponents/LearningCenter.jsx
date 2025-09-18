@@ -8,49 +8,7 @@ import {
   Globe,
   Award,
 } from "lucide-react";
-
-const services = [
-  {
-    id: 1,
-    title: "Japanese Language Class",
-    subtitle: "Japan Focused",
-    description:
-      "Comprehensive Japanese language learning with expert instructors",
-    icon: Globe,
-    color: "blue",
-    delay: 0.1,
-  },
-  {
-    id: 2,
-    title: "Mock Tests",
-    subtitle: "Test Preparation",
-    description:
-      "Practice tests and comprehensive preparation for various international exams",
-    icon: FileText,
-    color: "red",
-    delay: 0.2,
-  },
-  {
-    id: 3,
-    title: "SSW Visa Class",
-    subtitle: "Inquiry & Support",
-    description:
-      "Get personalized consultation and guidance for your SSW visa application",
-    icon: Users,
-    color: "emerald",
-    delay: 0.3,
-  },
-  {
-    id: 4,
-    title: "TITP Visa Class",
-    subtitle: "Flexible Timing",
-    description:
-      "Get assistance and guidance for TITP visa process with flexible consultation options",
-    icon: Calendar,
-    color: "purple",
-    delay: 0.4,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ServiceCard = ({ service, index }) => {
   const ref = React.useRef(null);
@@ -183,6 +141,46 @@ export default function LearningCenterSection() {
   const isHeaderInView = useInView(headerRef, { once: true, threshold: 0.3 });
   const contentRef = React.useRef(null);
   const isContentInView = useInView(contentRef, { once: true, threshold: 0.2 });
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      id: 1,
+      title: t("about.center.services.1.title"),
+      subtitle: t("about.center.services.1.subtitle"),
+      description: t("about.center.services.1.description"),
+      icon: Globe,
+      color: "blue",
+      delay: 0.1,
+    },
+    {
+      id: 2,
+      title: t("about.center.services.2.title"),
+      subtitle: t("about.center.services.2.subtitle"),
+      description: t("about.center.services.2.description"),
+      icon: FileText,
+      color: "red",
+      delay: 0.2,
+    },
+    {
+      id: 3,
+      title: t("about.center.services.3.title"),
+      subtitle: t("about.center.services.3.subtitle"),
+      description: t("about.center.services.3.description"),
+      icon: Users,
+      color: "emerald",
+      delay: 0.3,
+    },
+    {
+      id: 4,
+      title: t("about.center.services.4.title"),
+      subtitle: t("about.center.services.4.subtitle"),
+      description: t("about.center.services.4.description"),
+      icon: Calendar,
+      color: "purple",
+      delay: 0.4,
+    },
+  ];
 
   return (
     <section className="py-16 md:py-20 lg:py-24 relative overflow-hidden bg-secondary mx-6 rounded-4xl">
@@ -226,9 +224,9 @@ export default function LearningCenterSection() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            About Our
+            {t("about.center.heading1")}
             <span className="bg-primary text-secondary inline-block -rotate-2 px-6 py-1 rounded-full">
-              Learning Center
+              {t("about.center.heading2")}
             </span>
           </h2>
         </motion.div>
@@ -249,47 +247,24 @@ export default function LearningCenterSection() {
               <div className="prose prose-lg max-w-none">
                 <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <BookOpen className="w-10 h-10 text-primary" />
-                  What We Offer
+                  {t("about.center.title")}
                 </h3>
 
                 <div className="space-y-6 text-white leading-relaxed">
-                  <p className="text-lg">
-                    We aim to make international-level education accessible to
-                    everyone. Our programs are designed to help ambitious
-                    students achieve their goals without breaking the bank.
-                  </p>
+                  <p className="text-lg">{t("about.center.p1")}</p>
 
-                  <p>
-                    <strong className="text-white">
-                      Our main focus is Japan-oriented education
-                    </strong>
-                    , including Japanese Language Classes (JLPT preparation),
-                    Test Preparation, and visa-related courses like SSW and
-                    TITP. Our instructors are experienced professionals who
-                    guide you through every step of the process.
-                  </p>
+                  <p>{t("about.center.p2")}</p>
 
-                  <p>
-                    Many institutions promise results, but few deliver.{" "}
-                    <strong className="text-white">
-                      Our mock tests and preparation programs
-                    </strong>{" "}
-                    give real exam-like experiences, detailed analysis, and
-                    personalized feedback, ensuring measurable improvement and
-                    confidence.
-                  </p>
+                  <p>{t("about.center.p3")}</p>
 
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border-l-4 border-primary my-8">
                     <p className="text-gray-700 mb-3">
-                      <strong>
-                        Meet our experts on weekdays from 10:00 AM to 3:00 PM
-                      </strong>{" "}
-                      - get personalized consultation before enrolling in any
-                      class.
+                      <strong>{t("about.center.bold.t1")}</strong>{" "}
+                      {t("about.center.normal.t1")}
                     </p>
                     <p className="text-gray-600">
-                      <strong>Flexible schedules:</strong> Choose classes
-                      between 7 AM and 4 PM according to your convenience.
+                      <strong>{t("about.center.bold.t2")}</strong>{" "}
+                      {t("about.center.normal.t2")}
                     </p>
                   </div>
                 </div>

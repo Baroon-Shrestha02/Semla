@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { GraduationCap, Users, Award, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function AboutIntro() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,26 +28,23 @@ export default function AboutIntro() {
   const features = [
     {
       icon: GraduationCap,
-      title: "Expert Guidance",
-      description:
-        "Comprehensive support in Japanese language, test preparation, SSW & TITP visa classes, along with further career guidance",
+      title: t("about.intro.features.1.title"),
+      description: t("about.intro.features.1.description"),
     },
     {
       icon: Globe,
-      title: "Visa & Career Pathways",
-      description:
-        "Guidance for SSW and TITP visa processes with career opportunities in Japan",
+      title: t("about.intro.features.2.title"),
+      description: t("about.intro.features.2.description"),
     },
     {
       icon: Users,
-      title: "Dedicated Assistance",
-      description:
-        "Personalized mentoring and support tailored to each student and professional",
+      title: t("about.intro.features.3.title"),
+      description: t("about.intro.features.3.description"),
     },
     {
       icon: Award,
-      title: "Proven Success",
-      description: "98% visa approval rate",
+      title: t("about.intro.features.4.title"),
+      description: t("about.intro.features.4.description"),
     },
   ];
 
@@ -106,7 +105,7 @@ export default function AboutIntro() {
               }`}
             >
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Your Gateway to{" "}
+                {t("about.intro.title1")}{" "}
                 <span className="bg-secondary px-6 py-2 rounded-full text-white uppercase transform -rotate-3 inline-block">
                   Japan
                 </span>
@@ -121,10 +120,7 @@ export default function AboutIntro() {
               }`}
             >
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                We transform your international study dreams into reality. From
-                university selection to visa approval, our expert team provides
-                comprehensive support every step of the way, making your journey
-                abroad seamless and successful.
+                {t("about.intro.p1")}
               </p>
             </div>
 
@@ -167,7 +163,7 @@ export default function AboutIntro() {
             >
               <Link to="/contact">
                 <button className="bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-                  Start Your Journey
+                  {t("about.intro.btn")}
                 </button>
               </Link>
             </div>
