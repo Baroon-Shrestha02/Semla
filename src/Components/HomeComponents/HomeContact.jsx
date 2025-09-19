@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 export default function HomeContact() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,8 @@ export default function HomeContact() {
     subject: "",
     message: "",
   });
+
+  const { t } = useTranslation();
 
   const handleInputChange = (e) => {
     setFormData({
@@ -38,7 +41,7 @@ export default function HomeContact() {
   const contactMethods = [
     {
       icon: Phone,
-      title: "Call Us",
+      title: t("home.contact.det.call"),
       primary: "+977 9813960567",
       description: "Mon-Fri 9AM-6PM",
       action: "tel:+9779813960567",
@@ -46,7 +49,7 @@ export default function HomeContact() {
     },
     {
       icon: Mail,
-      title: "Email Us",
+      title: t("home.contact.det.mail"),
       primary: "info@semlaconsultancy.com",
       description: "We'll respond within 24 hours",
       action: "mailto:info@semlaconsultancy.com",
@@ -54,7 +57,7 @@ export default function HomeContact() {
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
+      title: t("home.contact.det.whatsapp"),
       primary: "+977 9813960567",
       description: "Available 24/7",
       action: "https://wa.me/9779813960567",
@@ -86,14 +89,13 @@ export default function HomeContact() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Get in
+            {t("home.contact.title")}
             <span className="bg-primary text-secondary px-6 py-1 inline-block -rotate-4 rounded-full">
-              Touch
+              {t("home.contact.title2")}
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Ready to start your study abroad journey? We're here to help you
-            every step of the way.
+            {t("home.contact.des")}
           </p>
         </div>
 
@@ -105,7 +107,7 @@ export default function HomeContact() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  Visit Us in Person
+                  {t("home.contact.det.visit")}
                 </h2>
                 <button
                   onClick={() =>
@@ -116,7 +118,9 @@ export default function HomeContact() {
                   }
                   className="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 flex items-center space-x-2 group"
                 >
-                  <span className="text-sm font-medium">View on Map</span>
+                  <span className="text-sm font-medium">
+                    {t("home.contact.det.view")}
+                  </span>
                   <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 </button>
               </div>
@@ -223,7 +227,9 @@ export default function HomeContact() {
                     }
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center space-x-2 shadow-lg group"
                   >
-                    <span className="text-sm font-medium">Get Directions</span>
+                    <span className="text-sm font-medium">
+                      {t("home.contact.det.direction")}
+                    </span>
                     <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   </button>
                 </div>
@@ -234,15 +240,14 @@ export default function HomeContact() {
             <div className="mt-6 bg-white rounded-xl p-6 shadow-lg border border-gray-100">
               <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
                 <Calendar className="w-5 h-5 text-green-600 mr-2" />
-                Book an Appointment
+                {t("home.contact.cta.title")}
               </h4>
               <p className="text-gray-600 text-sm mb-4">
-                Schedule a consultation with our education experts. Free initial
-                consultation available.
+                {t("home.contact.cta.subtitle")}
               </p>
               <Link to="/contact">
                 <button className="w-full bg-secondary text-white py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
-                  Schedule Consultation
+                  {t("home.contact.cta.btn")}
                 </button>
               </Link>
             </div>

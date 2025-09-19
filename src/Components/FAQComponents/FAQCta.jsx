@@ -8,10 +8,11 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function EnhancedFAQCta() {
   const [isHovered, setIsHovered] = useState(false);
-
+  const { t } = useTranslation();
   const contactMethods = [
     {
       icon: MessageCircle,
@@ -90,7 +91,7 @@ export default function EnhancedFAQCta() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
             >
-              Still have questions?
+              {t("faq.cta.title")}
             </motion.h3>
 
             <motion.p
@@ -99,48 +100,15 @@ export default function EnhancedFAQCta() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-blue-100 mb-12 text-xl max-w-2xl mx-auto leading-relaxed"
             >
-              Our expert advisors are here to help you navigate your journey to
-              studying in Japan. Get personalized guidance every step of the
-              way.
+              {t("faq.cta.subtitle")}
             </motion.p>
-
-            {/* Contact methods */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="flex flex-wrap justify-center gap-6 mb-12"
-            >
-              {contactMethods.map((method, index) => {
-                const IconComponent = method.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
-                  >
-                    <div className={`p-2 rounded-full ${method.color}`}>
-                      <IconComponent className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="text-left">
-                      <div className="font-semibold text-sm">
-                        {method.label}
-                      </div>
-                      <div className="text-blue-200 text-xs">
-                        {method.description}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
 
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col gap-4 justify-center items-center"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -150,12 +118,12 @@ export default function EnhancedFAQCta() {
                 className="group relative bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  Contact Our Team
                   <motion.div
                     animate={{ x: isHovered ? 5 : 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    {/* <ArrowRight className="w-5 h-5" /> */}
+                    {t("faq.cta.team")}
                   </motion.div>
                 </span>
 
@@ -173,9 +141,7 @@ export default function EnhancedFAQCta() {
 
               <div className="flex items-center gap-2 text-blue-200">
                 <Users className="w-4 h-4" />
-                <span className="text-sm">
-                  Join 10,000+ students already studying in Japan
-                </span>
+                <span className="text-sm">{t("faq.cta.subteam")}</span>
               </div>
             </motion.div>
 
@@ -188,15 +154,15 @@ export default function EnhancedFAQCta() {
             >
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>24/7 Support</span>
+                <span>{t("faq.cta.sup")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                <span>Free Consultation</span>
+                <span>{t("faq.cta.consult")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span>Expert Guidance</span>
+                <span>{t("faq.cta.guidance")}</span>
               </div>
             </motion.div>
           </div>

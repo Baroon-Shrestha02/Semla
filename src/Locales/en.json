@@ -22,6 +22,40 @@
       "btn1": "Start Your Journey",
       "btn2": "Watch Our Story"
     },
+    "uni": {
+      "title1": "Discover",
+      "title2": "Top Choices",
+      "title3": "represented by",
+      "des": "We have partnered with 10+ universities & institutes in Japan."
+    },
+    "testi": {
+      "title": "Hear From Our",
+      "title2": "Students",
+      "des": "Discover what our students have to say about their learning experience, from mastering Japanese language skills to achieving abroad success with our guidance."
+    },
+    "social": {
+      "title": "Follow us on",
+      "title2": "Socials",
+      "des": "Semla looks ahead with an expanded vision to be your lifelong launch pad for realizing their highest potential."
+    },
+    "contact": {
+      "title": "Get In",
+      "title2": "Touch",
+      "des": "Ready to start your study abroad journey? We're here to help you every step of the way.",
+      "cta": {
+        "title": "Book an Appointment",
+        "subtitle": "Schedule a consultation with our education experts. Free initial consultation available.",
+        "btn": "Schedule Consultation"
+      },
+      "det": {
+        "visit": "Visit Us in Person",
+        "view": "View on map",
+        "call": "Call Us",
+        "mail": "Email Us",
+        "whatsapp": "WhatsApp",
+        "direction": "Get Directions"
+      }
+    },
     "intro": {
       "title1": "Your Gateway to",
       "title2": "Japan & Beyond",
@@ -119,6 +153,65 @@
         }
       }
     },
+    "vision": [
+      {
+        "id": "vision",
+        "title": "Our Vision",
+        "subtitle": "Shaping Careers & Education Beyond Borders",
+        "description": "We envision a future where pursuing opportunities in Japan—whether through Student Visas, SSW, or TITP—becomes simple, transparent, and accessible to everyone. Our vision is to bridge cultures, empower individuals with global skills, and create pathways for students and professionals to thrive in Japan’s world-class academic and professional environment.",
+        "highlights": [
+          {
+            "icon": "Users",
+            "text": "Cultural Bridge Building",
+            "description": "Connecting diverse communities through education and work"
+          },
+          {
+            "icon": "Sparkles",
+            "text": "Innovation in Opportunities",
+            "description": "Opening new doors for both students and professionals"
+          }
+        ],
+        "stats": [
+          { "number": "10+", "label": "Partner Universities" },
+          { "number": "500+", "label": "Students Placed" },
+          { "number": "98%", "label": "Success Rate" }
+        ],
+        "layout": "text-left",
+        "accentColor": "text-blue-600",
+        "gradientFrom": "from-blue-500",
+        "gradientTo": "to-indigo-600",
+        "image": "About/vision.png"
+      },
+      {
+        "id": "mission",
+
+        "title": "Our Mission",
+        "subtitle": "Guiding Students & Professionals to Japan",
+        "description": "Our mission is to provide step-by-step support for every visa pathway—Student, SSW, and TITP. From language training and skill development to visa processing, documentation, and interview preparation, we ensure each candidate is well-prepared for success. We are committed to making your journey to Japan smooth, reliable, and filled with opportunities for growth and achievement.",
+        "highlights": [
+          {
+            "icon": "BookOpen",
+            "text": "Comprehensive Guidance",
+            "description": "From applications to interviews, we cover it all"
+          },
+          {
+            "icon": "Heart",
+            "text": "Personalized Support",
+            "description": "Tailored solutions for students and workers alike"
+          }
+        ],
+        "stats": [
+          { "number": "24/7", "label": "Years Experience" },
+          { "number": "100%", "label": "Satisfaction Rate" },
+          { "number": "5+", "label": "Years Experience" }
+        ],
+        "layout": "text-right",
+        "accentColor": "text-purple-600",
+        "gradientFrom": "from-purple-500",
+        "gradientTo": "to-pink-600",
+        "image": "About/mission.png"
+      }
+    ],
     "why": {
       "title": "Why Choose Us as you partner?",
       "subtitle": "At Semla Consultancy, our strength lies in the diverse expertise and passionate dedication of our team. We go beyond guidance to craft extraordinary experiences that empower your journey abroad.",
@@ -297,15 +390,15 @@
           "paragraphs": [
             {
               "text": "We guide you through every step of the application process for student, SSW, and TITP programs. Our experts ensure that all documents are complete, error-free, and compliant with university or embassy requirements.",
-              "image": "services/core/img9.jpg"
+              "image": "services/core/doc1.jpg"
             },
             {
               "text": "Our team reviews essays, SOPs, and recommendation letters, providing detailed feedback and enhancements to ensure your application is professional, compelling, and stands out among other applicants.",
-              "image": "services/core/img10.jpg"
+              "image": "services/core/img8.jpg"
             },
             {
               "text": "We prepare you for interviews and documentation checks, giving you confidence and clarity throughout the application process. Step-by-step coaching ensures readiness for all requirements.",
-              "image": "services/core/img11.jpg"
+              "image": "services/core/img7.webp"
             }
           ]
         },
@@ -321,23 +414,23 @@
           "paragraphs": [
             {
               "text": "We provide step-by-step guidance for student, SSW, and TITP visa applications, ensuring all documents are complete, accurate, and submitted correctly. Our process helps minimize delays and errors.",
-              "image": "services/core/img12.jpg"
+              "image": "services/core/img8.jpg"
             },
             {
               "text": "Our legal advisors review your documentation for compliance with Japanese immigration requirements, assist with embassy submissions, and provide tips to handle complex or unusual cases effectively.",
-              "image": "services/core/img13.jpg"
+              "image": "services/core/img7.webp"
             },
             {
               "text": "We offer mock visa interviews and personalized coaching to build confidence, improve communication, and prepare you for potential questions. This ensures you are ready for real embassy interviews with professionalism.",
-              "image": "services/core/img14.jpg"
+              "image": "services/core/img3.jpg"
             },
             {
               "text": "Our training also covers soft skills such as body language, etiquette, and cultural awareness, helping applicants present themselves positively and increase their chances of visa approval.",
-              "image": "services/core/img15.jpg"
+              "image": "About/why/ser4.jpg"
             },
             {
               "text": "After the visa approval, we provide guidance on arrival procedures, essential documentation to carry, and tips for smooth entry into Japan, ensuring a stress-free start to your journey.",
-              "image": "services/core/img16.jpg"
+              "image": "About/why/ser6.jpg"
             }
           ]
         },
@@ -353,19 +446,262 @@
           "paragraphs": [
             {
               "text": "Comprehensive cultural, academic, and lifestyle preparation helps students and workers adapt quickly and smoothly when moving to Japan. Topics include etiquette, communication, and cultural norms.",
-              "image": "services/core/img17.jpg"
+              "image": "services/core/ori1.jpeg"
             },
             {
               "text": "Orientation covers practical guidance on housing, part-time jobs, healthcare, banking, and transportation to ensure a smooth transition to Japanese life.",
-              "image": "services/core/img18.jpg"
+              "image": "services/core/ori2.jpeg"
             },
             {
               "text": "Students and workers gain access to a 24/7 support network for questions, emergencies, and ongoing guidance, ensuring they feel confident and supported throughout their stay in Japan.",
-              "image": "services/core/img19.jpg"
+              "image": "services/core/ori3.jpeg"
             }
           ]
         }
       ]
+    },
+    "course": {
+      "title": "Specialized Training Programs",
+      "subtitle": "From language proficiency to cultural adaptation, our comprehensive courses prepare you for every aspect of studying in Japan",
+      "courses": [
+        {
+          "title": "JLPT Preparation Courses",
+          "subtitle": "N5 to N1 Level Training",
+          "description": "Comprehensive Japanese Language Proficiency Test preparation with native instructors and proven methodologies.",
+          "features": [
+            "All JLPT levels (N5-N1)",
+            "Native Japanese instructors",
+            "Practice tests & materials",
+            "Small class sizes"
+          ],
+          "duration": "3-12 months",
+          "icon": "BookOpen",
+          "color": "from-red-500 to-pink-600",
+          "bgColor": "bg-red-50",
+          "borderColor": "border-red-200"
+        },
+        {
+          "title": "Mock Test Series",
+          "subtitle": "Realistic Exam Simulation",
+          "description": "Intensive mock test series designed to simulate actual JLPT and university entrance exam conditions.",
+          "features": [
+            "Weekly mock tests",
+            "Detailed performance analysis",
+            "Time management training",
+            "Weakness identification"
+          ],
+          "duration": "2-6 months",
+          "icon": "Award",
+          "color": "from-blue-500 to-cyan-600",
+          "bgColor": "bg-blue-50",
+          "borderColor": "border-blue-200"
+        },
+        {
+          "title": "SSW Courses",
+          "subtitle": "Specialized Study/Work Program",
+          "description": "Structured programs combining academic studies and work opportunities in Japan, designed for international students seeking hands-on experience.",
+          "features": [
+            "Work-study integration",
+            "Japanese language practice",
+            "Internship opportunities",
+            "Career guidance"
+          ],
+          "duration": "6-12 months",
+          "icon": "Users",
+          "color": "from-green-500 to-emerald-600",
+          "bgColor": "bg-green-50",
+          "borderColor": "border-green-200"
+        },
+        {
+          "title": "Cultural Orientation Program",
+          "subtitle": "Japanese Society & Customs",
+          "description": "Essential cultural training to help students adapt to Japanese society, customs, and academic environment.",
+          "features": [
+            "Business etiquette",
+            "Social customs",
+            "Academic culture",
+            "Daily life preparation"
+          ],
+          "duration": "1-3 months",
+          "icon": "Globe",
+          "color": "from-purple-500 to-indigo-600",
+          "bgColor": "bg-purple-50",
+          "borderColor": "border-purple-200"
+        },
+        {
+          "title": "TITP Visa Class",
+          "subtitle": "Technical Intern Training Program",
+          "description": "Comprehensive guidance for TITP visa applicants, including training, documentation, and orientation for working opportunities in Japan.",
+          "features": [
+            "Language & skill training",
+            "Visa documentation support",
+            "Job placement assistance",
+            "Pre-departure orientation"
+          ],
+          "duration": "6-12 months",
+          "icon": "CheckCircle",
+          "color": "from-orange-500 to-red-500",
+          "bgColor": "bg-orange-50",
+          "borderColor": "border-orange-200"
+        },
+        {
+          "title": "Pre-Departure & Travel Preparation",
+          "subtitle": "Preparing for Life in Japan",
+          "description": "A focused program to guide students through pre-departure preparations including accommodation, travel essentials, and cultural adaptation.",
+          "features": [
+            "Travel documentation guidance",
+            "Accommodation assistance",
+            "Cultural workshops",
+            "Daily life orientation"
+          ],
+          "duration": "2-4 weeks",
+          "icon": "Plane",
+          "color": "from-teal-500 to-cyan-500",
+          "bgColor": "bg-teal-50",
+          "borderColor": "border-teal-200"
+        }
+      ]
+    },
+    "process": {
+      "title1": "Our Work",
+      "title2": "Process",
+      "subtitle": "Step-by-step guidance — from counseling in Nepal to your successful arrival in Japan.",
+      "btn": "Start Your Journey",
+      "btndes": "Let us guide you from Nepal to Japan step by step.",
+      "highlights": "Highlights",
+      "proc": "Process",
+      "receive": "What You'll Receive",
+      "processSteps": [
+        {
+          "step": "01",
+          "title": "Initial Consultation",
+          "description": "We begin with a personalized consultation to understand your background, career goals, and future aspirations. Whether you want to pursue higher studies in Japan or apply for SSW/TITP opportunities, our counselors carefully assess your profile and create a tailored plan. This ensures you start your journey with clarity, confidence, and a realistic roadmap designed to meet your goals.",
+          "icon": "MessageCircle",
+          "deliverables": [
+            "Profile Report",
+            "Career Path Plan",
+            "Counseling Notes"
+          ],
+          "keyActivities": [
+            "Profile Review",
+            "Goal Mapping",
+            "Pathway Selection"
+          ],
+          "highlights": [
+            "Tailored advice",
+            "Clear roadmap",
+            "Right opportunity fit"
+          ],
+          "image": "services/ser1.jpg"
+        },
+        {
+          "step": "02",
+          "title": "Language & Skill Training",
+          "description": "Japanese language is at the heart of both study and work in Japan. We provide interactive classes focused on JLPT preparation and communication skills, supported by practice sessions and mock exams. For SSW and TITP aspirants, we also offer skill-based training aligned with industry requirements. This blend of language and professional skills ensures candidates are fully prepared to excel in both academic and workplace environments.",
+          "icon": "BookOpen",
+          "deliverables": [
+            "JLPT Materials",
+            "Skill Training Modules",
+            "Progress Reports"
+          ],
+          "keyActivities": [
+            "Language Classes",
+            "Test Preperations",
+            "Skill Practice"
+          ],
+          "highlights": ["JLPT-focused", "Skill-based", "Feedback-driven"],
+          "image": "services/ser2.jpg"
+        },
+        {
+          "step": "03",
+          "title": "Pathway Selection",
+          "description": "After building a strong foundation, we guide you in choosing the right pathway. Students receive a curated list of universities and programs based on eligibility, budget, and long-term plans. For professionals, we provide targeted SSW job roles and TITP placements that match your skills and ambitions. This ensures every individual follows a pathway that maximizes opportunities and long-term growth in Japan.",
+          "icon": "GraduationCap",
+          "deliverables": [
+            "Study/Job Options Report",
+            "Pathway Matches",
+            "Action Plan"
+          ],
+          "keyActivities": [
+            "University Research",
+            "Job Role Mapping",
+            "Placement Strategy"
+          ],
+          "highlights": [
+            "Flexible options",
+            "Targeted guidance",
+            "Maximize success"
+          ],
+          "image": "services/program.webp"
+        },
+        {
+          "step": "04",
+          "title": "Documentation Support",
+          "description": "Our team provides complete end-to-end assistance with your documentation, including transcripts, resumes, statements of purpose, application forms, and visa paperwork. Every document is carefully reviewed for accuracy and professionalism, ensuring you meet the strict standards of Japanese institutions and employers. This detailed support removes confusion and minimizes errors during the application process.",
+          "icon": "FileText",
+          "deliverables": [
+            "Forms & Transcripts",
+            "Resumes/Letters",
+            "SOP or Application Review"
+          ],
+          "keyActivities": [
+            "Document Preperations",
+            "Verification",
+            "Expert Review"
+          ],
+          "highlights": [
+            "99% accuracy",
+            "Professional quality",
+            "End-to-end support"
+          ],
+          "image": "services/ser4.jpg"
+        },
+        {
+          "step": "05",
+          "title": "Visa Processing",
+          "description": "Visa processing is often the most stressful part of the journey, but we make it simple and stress-free. For students, we handle Certificate of Eligibility (COE), application forms, and interview coaching. For SSW and TITP applicants, we guide you through official documentation, contracts, and embassy requirements. With our expert support, you’ll feel fully prepared and confident throughout the entire process.",
+          "icon": "CreditCard",
+          "deliverables": [
+            "COE Documents",
+            "Visa Application",
+            "Interview/Embassy Preperations"
+          ],
+          "keyActivities": ["Visa Docs", "Submission", "Mock Interviews"],
+          "highlights": [
+            "High success rate",
+            "COE guidance",
+            "Embassy readiness"
+          ],
+          "image": "services/ser5.jpg"
+        },
+        {
+          "step": "06",
+          "title": "Pre-Departure & Orientation",
+          "description": "Before you leave for Japan, we ensure you are well-prepared for your new journey. Our orientation covers Japanese culture, lifestyle, workplace or university expectations, and survival tips to adjust smoothly. We also assist with housing, travel arrangements, and provide a detailed checklist for a stress-free departure. This final step makes sure you begin your life in Japan with confidence and support.",
+          "icon": "MapPin",
+          "deliverables": [
+            "Orientation Guide",
+            "Housing/Workplace Support",
+            "Travel Checklist"
+          ],
+          "keyActivities": [
+            "Cultural Training",
+            "Work/Study Preperations",
+            "Workshops"
+          ],
+          "highlights": [
+            "Cultural readiness",
+            "Smooth transition",
+            "Ongoing support"
+          ],
+          "image": "services/ser6.jpg"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "subtitle": "Join hundreds of successful students who have achieved their dreams of studying in Japan",
+      "btn": "Schedule Free Consultation"
     }
   },
   "gallery": {
@@ -378,12 +714,214 @@
     "hero": {
       "heading": "Get in Touch with Us",
       "subheading": "Reach out to Smela Educational Consultancy for expert guidance on studying in Japan. We're here to answer your questions and assist you every step of the way."
+    },
+    "title1": "Get In",
+    "title2": "Touch",
+    "subtitle": "Ready to start your international education journey? Contact us today for personalized guidance.",
+    "conv": {
+      "title": "Let's Start a Conversation",
+      "subtitle": "Our expert counselors are here to guide you through every step of your study abroad journey. Reach out to us through any of the channels below.",
+      "why": {
+        "title": "Why Choose Semla?",
+        "p1": "Expert counselors with 10+ years experience",
+        "p2": "98% visa approval success rate",
+        "p3": "End-to-end support from application to departure",
+        "p4": "Free initial consultation"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form and we'll get back to you via WhatsApp",
+      "data": {
+        "name": "First Name",
+        "pname": "Enter first name",
+        "lname": "Last Name",
+        "plname": "Enter last name",
+        "add": "Address",
+        "padd": "Enter your address",
+        "course": "Course Level",
+        "pcourse": "Select course level",
+        "inquiry": "Inquiry Type",
+        "pinquiry": "Select inquiry type",
+        "msg": "Message",
+        "pmsg": "Tell us about your study abroad goals and how we can help...",
+        "btn": "Send via WhatsApp",
+        "btns": "Sending...",
+        "sent": "メッセージを送信しました!",
+        "senttext": "メッセージの準備が完了し、WhatsApp がすぐに開きます。",
+        "sentdes": "お問い合わせにはできるだけ早くご返答させていただきます。"
+      },
+      "courseop": {
+        "ug": "Undergraduatte",
+        "pg": "Postgraduatte"
+      },
+      "subop": {
+        "academic": "Academic Counseling",
+        "application": "Application Assistance",
+        "visa": "Visa Processing",
+        "scholar": "Scholarship Guidance",
+        "inquiry": "General Inquiry"
+      },
+      "contactinfo": {
+        "call": "Call Us",
+        "whatsapp": "WhatsApp",
+        "mail": "Email",
+        "address": "Address"
+      }
+    },
+    "visit": {
+      "title1": "Visit Our",
+      "title2": "Office",
+      "subtitle": "Drop by our office for a face-to-face consultation and personalized guidance.",
+      "left": {
+        "title": "We'd Love to Meet You",
+        "subtitle": "Visit our office to discuss your goals, explore university options, and get expert advice tailored to your needs.",
+        "det": "Office Details",
+        "add": "Address",
+        "phone": "Phone",
+        "hrs": "Office Hours",
+        "btn": "Get Directions"
+      }
     }
   },
   "faq": {
     "hero": {
       "heading": "Frequently Asked Questions",
       "subheading": "Everything you need to know about studying in Japan – from courses and universities to visas."
+    },
+    "que": {
+      "title1": "Frequently",
+      "title2": "Asked",
+      "title3": "Questions",
+      "subtitle": "Everything you need to know about studying in Japan",
+      "faqs": [
+        {
+          "number": 1,
+          "question": "Which opportunities in Japan can I apply for?",
+          "answer": "We guide applicants for three major pathways: Student Visa for higher education, SSW (Specified Skilled Worker) for skilled jobs, and TITP (Technical Intern Training Program) for technical training. Each pathway is tailored to different goals—education, skilled employment, or industry-focused training.",
+          "subtitle": "Pathways: Student, SSW, TITP"
+        },
+        {
+          "number": 2,
+          "question": "Do I need to know Japanese before applying?",
+          "answer": "Yes, for SSW and TITP, Japanese language proficiency (JLPT or NAT tests) is mandatory. For Student Visas, many programs are available in English, but learning Japanese is highly recommended for daily life and better opportunities. We provide structured training before departure.",
+          "subtitle": "Language preparation"
+        },
+        {
+          "number": 3,
+          "question": "What are the visa requirements for Student, SSW, and TITP visas?",
+          "answer": "Student visas require admission to a Japanese institution and proof of finances. SSW visas require passing Japanese and skill exams, while TITP requires agreements through authorized sending and receiving organizations. We provide end-to-end support for all these processes.",
+          "subtitle": "Visa documentation and process"
+        },
+        {
+          "number": 4,
+          "question": "Do you provide skill training before departure?",
+          "answer": "Yes. We train candidates in language, cultural orientation, and job-specific skills to prepare them for Japan. For SSW and TITP, we focus on industry-specific requirements, while for students we prepare for academic and part-time work readiness.",
+          "subtitle": "Pre-departure skill training"
+        },
+        {
+          "number": 5,
+          "question": "Is professional counseling available?",
+          "answer": "Yes, we provide counseling from experienced advisors and representatives from Japan. This helps candidates understand their pathway, career growth, cultural expectations, and life in Japan before departure.",
+          "subtitle": "Counseling and mentorship"
+        },
+        {
+          "number": 6,
+          "question": "Can students work part-time while studying?",
+          "answer": "Yes, Student Visa holders can work up to 28 hours per week with proper work permits. We help students with permit applications and connect them with part-time job opportunities.",
+          "subtitle": "Part-time work for students"
+        },
+        {
+          "number": 7,
+          "question": "What kind of jobs are available under the SSW visa?",
+          "answer": "SSW visas cover industries such as caregiving, hospitality, construction, agriculture, and manufacturing. Applicants must pass skill exams for their chosen industry, and we guide candidates through the preparation and application.",
+          "subtitle": "SSW industry options"
+        },
+        {
+          "number": 8,
+          "question": "What is the purpose of the TITP program?",
+          "answer": "The TITP (Technical Intern Training Program) allows candidates to gain hands-on experience in Japan's industries while contributing to skill development. After training, many candidates return with enhanced expertise or transition to advanced opportunities.",
+          "subtitle": "Technical Intern Training Program"
+        },
+        {
+          "number": 9,
+          "question": "Are scholarships or financial support available for students?",
+          "answer": "Yes, international students can apply for scholarships like MEXT, JASSO, or university-specific grants. We guide you in identifying suitable scholarships and assist with applications to increase success rates.",
+          "subtitle": "Scholarship opportunities"
+        },
+        {
+          "number": 10,
+          "question": "Do SSW and TITP workers get support with housing?",
+          "answer": "Yes, many employers in Japan provide or arrange housing for SSW and TITP participants. We assist in reviewing contracts and ensuring proper accommodation is arranged.",
+          "subtitle": "Accommodation for workers"
+        },
+        {
+          "number": 11,
+          "question": "What documents are required for applying?",
+          "answer": "For Student visas, common requirements include admission letters, transcripts, and financial proof. SSW requires skill test certificates and Japanese language proficiency. TITP requires training agreements through approved organizations. We help compile and verify all documents.",
+          "subtitle": "Application documentation"
+        },
+        {
+          "number": 12,
+          "question": "Do you help with interview preparation?",
+          "answer": "Yes. We conduct mock interviews and provide coaching for both embassy and employer interviews. This ensures confidence and higher chances of success across Student, SSW, and TITP applications.",
+          "subtitle": "Interview preparation"
+        },
+        {
+          "number": 13,
+          "question": "What kind of post-arrival support is available in Japan?",
+          "answer": "We help with accommodation setup, bank accounts, health insurance registration, and orientation programs. Local partners also provide guidance for cultural adjustment and emergency support.",
+          "subtitle": "Support after arrival"
+        },
+        {
+          "number": 14,
+          "question": "Can SSW workers switch industries in Japan?",
+          "answer": "No, the SSW visa is tied to a specific industry. However, after gaining experience and qualifications, workers may explore advanced pathways or extensions within their field.",
+          "subtitle": "SSW work flexibility"
+        },
+        {
+          "number": 15,
+          "question": "How long can I stay in Japan with these visas?",
+          "answer": "Student visas typically last for the duration of the academic program. SSW visas are valid up to 5 years, depending on the industry. TITP visas usually cover 3–5 years of technical training.",
+          "subtitle": "Visa duration"
+        },
+        {
+          "number": 16,
+          "question": "Do you provide Japanese cultural training?",
+          "answer": "Yes, we prepare candidates for Japanese etiquette, workplace culture, and lifestyle. This helps students, SSW, and TITP participants integrate smoothly into society and workplaces.",
+          "subtitle": "Cultural orientation"
+        },
+        {
+          "number": 17,
+          "question": "How do you ensure a higher visa success rate?",
+          "answer": "Our team provides detailed document checks, mock interviews, skill training, and language preparation. With expert counseling and embassy guidance, we maintain high success rates across Student, SSW, and TITP visas.",
+          "subtitle": "Visa success strategy"
+        },
+        {
+          "number": 18,
+          "question": "Can SSW and TITP workers transition to long-term opportunities?",
+          "answer": "Yes, many workers move from TITP to SSW, and SSW workers can later apply for advanced categories or even permanent residency if they meet requirements. We guide you through possible future transitions.",
+          "subtitle": "Future career growth"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "subtitle": "Our expert advisors are here to help you navigate your journey to studying in Japan. Get personalized guidance every step of the way.",
+      "team": "Contact Our Team",
+      "subteam": "Join 1,000+ students already studying in Japan",
+      "sup": "24/7 Support",
+      "consult": "Free Consultation",
+      "guidance": "Export Guidance"
     }
+  },
+  "footer": {
+    "des": "Your trusted partner in international education. We help students achieve their dreams of studying abroad with personalized guidance and expert support.",
+    "quick": "Quick Links",
+    "contact": "Contact Us",
+    "find": "Find Us",
+    "policy": "Privacy Policy",
+    "term": "Terms of Service",
+    "right": "All rights reserved"
   }
 }

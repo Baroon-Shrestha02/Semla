@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone, Navigation } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactVisit() {
   const [isMapInteractive, setIsMapInteractive] = useState(false);
+  const { t } = useTranslation();
 
   const officeHours = [
     { day: "Sunday - Friday", time: "9:00 AM - 6:00 PM" },
@@ -41,11 +43,11 @@ export default function ContactVisit() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Visit Our <span className="text-secondary">Office</span>
+            {t("contact.visit.title1")}{" "}
+            <span className="text-secondary">{t("contact.visit.title2")}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Drop by our office for a face-to-face consultation and personalized
-            guidance.
+            {t("contact.visit.subtitle")}
           </p>
         </motion.div>
 
@@ -60,18 +62,17 @@ export default function ContactVisit() {
           >
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                We'd Love to Meet You
+                {t("contact.visit.left.title")}
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Visit our office to discuss your goals, explore university
-                options, and get expert advice tailored to your needs.
+                {t("contact.visit.left.subtitle")}
               </p>
             </div>
 
             {/* Office Details */}
             <div className="bg-gray-50 rounded-2xl p-8 space-y-6">
               <h4 className="text-xl font-bold text-gray-900 mb-4">
-                Office Details
+                {t("contact.visit.left.det2")}
               </h4>
 
               {/* Address */}
@@ -85,7 +86,9 @@ export default function ContactVisit() {
                   <MapPin className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900 mb-1">Address</h5>
+                  <h5 className="font-semibold text-gray-900 mb-1">
+                    {t("contact.visit.left.add")}
+                  </h5>
                   <p className="text-gray-600">
                     Semla Educational Consultancy
                     <br />
@@ -105,7 +108,9 @@ export default function ContactVisit() {
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900 mb-1">Phone</h5>
+                  <h5 className="font-semibold text-gray-900 mb-1">
+                    {t("contact.visit.left.phone")}
+                  </h5>
                   <p className="text-gray-600">{phoneNumber}</p>
                 </div>
               </motion.div>
@@ -121,7 +126,7 @@ export default function ContactVisit() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">
-                    Office Hours
+                    {t("contact.visit.left.hrs")}
                   </h5>
                   <div className="space-y-1">
                     {officeHours.map((schedule, idx) => (
@@ -145,7 +150,8 @@ export default function ContactVisit() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Navigation className="w-5 h-5 mr-2" /> Get Directions
+                <Navigation className="w-5 h-5 mr-2" />{" "}
+                {t("contact.visit.left.btn")}
               </motion.button>
             </div>
           </motion.div>

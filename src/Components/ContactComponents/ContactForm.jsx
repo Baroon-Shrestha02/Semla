@@ -9,6 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,18 +22,19 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { t } = useTranslation();
 
   const courseOptions = [
-    { value: "undergraduate", label: "Undergraduate" },
-    { value: "postgraduate", label: "Postgraduate" },
+    { value: "undergraduate", label: t("contact.form.courseop.ug") },
+    { value: "postgraduate", label: t("contact.form.courseop.pg") },
   ];
 
   const subjectOptions = [
-    { value: "counseling", label: "Academic Counseling" },
-    { value: "application", label: "Application Assistance" },
-    { value: "visa", label: "Visa Processing" },
-    { value: "scholarship", label: "Scholarship Guidance" },
-    { value: "general", label: "General Inquiry" },
+    { value: "counseling", label: t("contact.form.subop.academic") },
+    { value: "application", label: t("contact.form.subop.application") },
+    { value: "visa", label: t("contact.form.subop.visa") },
+    { value: "scholarship", label: t("contact.form.subop.scholar") },
+    { value: "general", label: t("contact.form.subop.inquiry") },
   ];
 
   const handleInputChange = (e) => {
@@ -113,25 +115,25 @@ Sent from Semla Educational Consultancy website`;
   const contactInfo = [
     {
       icon: Phone,
-      title: "Call Us",
+      title: t("contact.form.contactinfo.call"),
       content: "+977 9813960567",
       color: "text-blue-600",
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
+      title: t("contact.form.contactinfo.whatsapp"),
       content: "+977 9813960567",
       color: "text-green-600",
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.form.contactinfo.mail"),
       content: "info@semlaconsultancy.com",
       color: "text-purple-600",
     },
     {
       icon: MapPin,
-      title: "Address",
+      title: t("contact.form.contactinfo.address"),
       content: "Chabahil, Kathmandu, Nepal",
       color: "text-red-600",
     },
@@ -149,11 +151,11 @@ Sent from Semla Educational Consultancy website`;
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get In <span className="text-secondary">Touch</span>
+            {t("contact.title1")}{" "}
+            <span className="text-secondary">{t("contact.title2")}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to start your international education journey? Contact us
-            today for personalized guidance.
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -168,12 +170,10 @@ Sent from Semla Educational Consultancy website`;
           >
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Let's Start a Conversation
+                {t("contact.conv.title")}
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our expert counselors are here to guide you through every step
-                of your study abroad journey. Reach out to us through any of the
-                channels below.
+                {t("contact.conv.subtitle")}
               </p>
             </div>
 
@@ -242,24 +242,24 @@ Sent from Semla Educational Consultancy website`;
               viewport={{ once: true }}
             >
               <h4 className="text-xl font-bold text-gray-900 mb-4">
-                Why Choose Semla?
+                {t("contact.conv.why.title")}
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-                  Expert counselors with 10+ years experience
+                  {t("contact.conv.why.p1")}
                 </li>
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-                  98% visa approval success rate
+                  {t("contact.conv.why.p2")}
                 </li>
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-                  End-to-end support from application to departure
+                  {t("contact.conv.why.p3")}
                 </li>
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-                  Free initial consultation
+                  {t("contact.conv.why.p4")}
                 </li>
               </ul>
             </motion.div>
@@ -277,18 +277,16 @@ Sent from Semla Educational Consultancy website`;
               <div className="space-y-6">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Send us a Message
+                    {t("contact.form.title")}
                   </h3>
-                  <p className="text-gray-600">
-                    Fill out the form and we'll get back to you via WhatsApp
-                  </p>
+                  <p className="text-gray-600">{t("contact.form.subtitle")}</p>
                 </div>
 
                 {/* Name Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      First Name *
+                      {t("contact.form.data.name")} *
                     </label>
                     <input
                       type="text"
@@ -297,12 +295,12 @@ Sent from Semla Educational Consultancy website`;
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Enter first name"
+                      placeholder={t("contact.form.data.pname")}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Last Name *
+                      {t("contact.form.data.lname")} *
                     </label>
                     <input
                       type="text"
@@ -311,7 +309,7 @@ Sent from Semla Educational Consultancy website`;
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Enter last name"
+                      placeholder={t("contact.form.data.plname")}
                     />
                   </div>
                 </div>
@@ -319,7 +317,7 @@ Sent from Semla Educational Consultancy website`;
                 {/* Address */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Address *
+                    {t("contact.form.data.add")} *
                   </label>
                   <input
                     type="text"
@@ -328,7 +326,7 @@ Sent from Semla Educational Consultancy website`;
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Enter your address"
+                    placeholder={t("contact.form.data.padd")}
                   />
                 </div>
 
@@ -336,7 +334,7 @@ Sent from Semla Educational Consultancy website`;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Course Level *
+                      {t("contact.form.data.course")} *
                     </label>
                     <select
                       name="courseOption"
@@ -345,7 +343,7 @@ Sent from Semla Educational Consultancy website`;
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                     >
-                      <option value="">Select course level</option>
+                      <option value="">{t("contact.form.data.pcourse")}</option>
                       {courseOptions.map((option) => (
                         <option key={option.value} value={option.value}>
                           {option.label}
@@ -355,7 +353,7 @@ Sent from Semla Educational Consultancy website`;
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Inquiry Type *
+                      {t("contact.form.data.inquiry")} *
                     </label>
                     <select
                       name="subjectOption"
@@ -364,7 +362,9 @@ Sent from Semla Educational Consultancy website`;
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                     >
-                      <option value="">Select inquiry type</option>
+                      <option value="">
+                        {t("contact.form.data.pinquiry")}
+                      </option>
                       {subjectOptions.map((option) => (
                         <option key={option.value} value={option.value}>
                           {option.label}
@@ -377,7 +377,7 @@ Sent from Semla Educational Consultancy website`;
                 {/* Message */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message *
+                    {t("contact.form.data.msg")} *
                   </label>
                   <textarea
                     name="message"
@@ -386,7 +386,7 @@ Sent from Semla Educational Consultancy website`;
                     required
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Tell us about your study abroad goals and how we can help..."
+                    placeholder={t("contact.form.data.pmsg")}
                   />
                 </div>
 
@@ -402,12 +402,12 @@ Sent from Semla Educational Consultancy website`;
                   {isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Sending...
+                      {t("contact.form.data.btns")}
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Send via WhatsApp
+                      {t("contact.form.data.btn")}
                     </>
                   )}
                 </motion.button>
@@ -423,14 +423,13 @@ Sent from Semla Educational Consultancy website`;
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Message Sent!
+                  {t("contact.form.data.sent")}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Your message has been prepared and WhatsApp should open
-                  shortly.
+                  {t("contact.form.data.senttext")}
                 </p>
                 <p className="text-sm text-gray-500">
-                  We'll respond to your inquiry as soon as possible.
+                  {t("contact.form.data.sentdes")}
                 </p>
               </motion.div>
             )}

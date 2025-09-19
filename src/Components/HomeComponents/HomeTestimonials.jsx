@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Star, Heart, ChevronUp, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function HomeTestimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const { t } = useTranslation();
 
   const testimonials = [
     {
@@ -123,15 +125,13 @@ export default function HomeTestimonials() {
     >
       <div className="flex items-center justify-center flex-col gap-4 my-6">
         <div className="font-extrabold text-2xl md:text-5xl ">
-          Hear From Our
+          {t("home.testi.title")}
           <span className="bg-primary text-secondary px-6 py-2 inline-block -rotate-2 rounded-full">
-            Students
+            {t("home.testi.title2")}
           </span>
         </div>
         <div className="max-w-3xl font-extralight text-lg md:text-2xl text-center">
-          Discover what our students have to say about their learning
-          experience, from mastering Japanese language skills to achieving study
-          abroad success with our guidance.
+          {t("home.testi.des")}
         </div>
       </div>
       <div className="max-w-7xl mx-auto">

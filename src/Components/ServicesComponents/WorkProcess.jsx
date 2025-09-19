@@ -12,113 +12,25 @@ import {
   Target,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const processSteps = [
-  {
-    id: 1,
-    step: "01",
-    title: "Initial Consultation",
-    description:
-      "We begin with a personalized consultation to understand your background, career goals, and future aspirations. Whether you want to pursue higher studies in Japan or apply for SSW/TITP opportunities, our counselors carefully assess your profile and create a tailored plan. This ensures you start your journey with clarity, confidence, and a realistic roadmap designed to meet your goals.",
-    icon: MessageCircle,
-    deliverables: ["Profile Report", "Career Path Plan", "Counseling Notes"],
-    keyActivities: ["Profile Review", "Goal Mapping", "Pathway Selection"],
-    highlights: ["Tailored advice", "Clear roadmap", "Right opportunity fit"],
-    image: "services/ser1.jpg",
-  },
-  {
-    id: 2,
-    step: "02",
-    title: "Language & Skill Training",
-    description:
-      "Japanese language is at the heart of both study and work in Japan. We provide interactive classes focused on JLPT preparation and communication skills, supported by practice sessions and mock exams. For SSW and TITP aspirants, we also offer skill-based training aligned with industry requirements. This blend of language and professional skills ensures candidates are fully prepared to excel in both academic and workplace environments.",
-    icon: BookOpen,
-    deliverables: [
-      "JLPT Materials",
-      "Skill Training Modules",
-      "Progress Reports",
-    ],
-    keyActivities: ["Language Classes", "Test Preperations", "Skill Practice"],
-    highlights: ["JLPT-focused", "Skill-based", "Feedback-driven"],
-    image: "services/ser2.jpg",
-  },
-  {
-    id: 3,
-    step: "03",
-    title: "Pathway Selection",
-    description:
-      "After building a strong foundation, we guide you in choosing the right pathway. Students receive a curated list of universities and programs based on eligibility, budget, and long-term plans. For professionals, we provide targeted SSW job roles and TITP placements that match your skills and ambitions. This ensures every individual follows a pathway that maximizes opportunities and long-term growth in Japan.",
-    icon: GraduationCap,
-    deliverables: [
-      "Study/Job Options Report",
-      "Pathway Matches",
-      "Action Plan",
-    ],
-    keyActivities: [
-      "University Research",
-      "Job Role Mapping",
-      "Placement Strategy",
-    ],
-    highlights: ["Flexible options", "Targeted guidance", "Maximize success"],
-    image: "services/program.webp",
-  },
-  {
-    id: 4,
-    step: "04",
-    title: "Documentation Support",
-    description:
-      "Our team provides complete end-to-end assistance with your documentation, including transcripts, resumes, statements of purpose, application forms, and visa paperwork. Every document is carefully reviewed for accuracy and professionalism, ensuring you meet the strict standards of Japanese institutions and employers. This detailed support removes confusion and minimizes errors during the application process.",
-    icon: FileText,
-    deliverables: [
-      "Forms & Transcripts",
-      "Resumes/Letters",
-      "SOP or Application Review",
-    ],
-    keyActivities: ["Document Preperations", "Verification", "Expert Review"],
-    highlights: ["99% accuracy", "Professional quality", "End-to-end support"],
-    image: "services/ser4.jpg",
-  },
-  {
-    id: 5,
-    step: "05",
-    title: "Visa Processing",
-    description:
-      "Visa processing is often the most stressful part of the journey, but we make it simple and stress-free. For students, we handle Certificate of Eligibility (COE), application forms, and interview coaching. For SSW and TITP applicants, we guide you through official documentation, contracts, and embassy requirements. With our expert support, you’ll feel fully prepared and confident throughout the entire process.",
-    icon: CreditCard,
-    deliverables: [
-      "COE Documents",
-      "Visa Application",
-      "Interview/Embassy Preperations",
-    ],
-    keyActivities: ["Visa Docs", "Submission", "Mock Interviews"],
-    highlights: ["High success rate", "COE guidance", "Embassy readiness"],
-    image: "services/ser5.jpg",
-  },
-  {
-    id: 6,
-    step: "06",
-    title: "Pre-Departure & Orientation",
-    description:
-      "Before you leave for Japan, we ensure you are well-prepared for your new journey. Our orientation covers Japanese culture, lifestyle, workplace or university expectations, and survival tips to adjust smoothly. We also assist with housing, travel arrangements, and provide a detailed checklist for a stress-free departure. This final step makes sure you begin your life in Japan with confidence and support.",
-    icon: MapPin,
-    deliverables: [
-      "Orientation Guide",
-      "Housing/Workplace Support",
-      "Travel Checklist",
-    ],
-    keyActivities: [
-      "Cultural Training",
-      "Work/Study Preperations",
-      "Workshops",
-    ],
-    highlights: ["Cultural readiness", "Smooth transition", "Ongoing support"],
-    image: "services/ser6.jpg",
-  },
-];
+const iconMap = {
+  MessageCircle,
+  BookOpen,
+  GraduationCap,
+  FileText,
+  CreditCard,
+  MapPin,
+};
 
 export default function WorkProcess() {
   const [activeStep, setActiveStep] = useState(0);
   const stepRefs = useRef([]);
+  const { t } = useTranslation();
+
+  const processSteps = t("services.process.processSteps", {
+    returnObjects: true,
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -150,14 +62,13 @@ export default function WorkProcess() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Our Work{" "}
+            {t("services.process.title1")}{" "}
             <span className="bg-primary text-secondary inline-block px-6 py-1 rounded-full -rotate-2">
-              Process
+              {t("services.process.title2")}
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600 leading-relaxed">
-            Step-by-step guidance — from counseling in Nepal to your successful
-            arrival in Japan.
+            {t("services.process.subtitle")}
           </p>
         </div>
 
@@ -166,7 +77,7 @@ export default function WorkProcess() {
           {/* Steps - Left */}
           <div className="space-y-32">
             {processSteps.map((step, index) => {
-              const Icon = step.icon;
+              const Icon = iconMap[step.icon];
               return (
                 <div
                   key={step.id}
@@ -277,7 +188,7 @@ export default function WorkProcess() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                     <Target className="w-5 h-5 text-violet-600" />
-                    What You'll Receive
+                    {t("services.process.receive")}
                   </h4>
                   <div className="grid grid-cols-2 gap-3">
                     {processSteps[activeStep].deliverables.map((item, i) => (
@@ -298,7 +209,7 @@ export default function WorkProcess() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                     <Users className="w-5 h-5 text-violet-600" />
-                    Our Process
+                    {t("services.process.proc")}
                   </h4>
                   <div className="space-y-3">
                     {processSteps[activeStep].keyActivities.map(
@@ -323,7 +234,7 @@ export default function WorkProcess() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                     <Plane className="w-5 h-5 text-violet-600" />
-                    Highlights
+                    {t("services.process.highlights")}
                   </h4>
                   <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
                     {processSteps[activeStep].highlights.map((h, i) => (
@@ -340,12 +251,12 @@ export default function WorkProcess() {
         <div className="text-center mt-24">
           <Link to="/contact">
             <button className="group inline-flex items-center gap-3 bg-primary text-secondary px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <span>Start Your Study Journey</span>
+              <span>{t("services.process.btn")}</span>
               <Plane className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </Link>
           <p className="text-gray-600 text-lg mt-4">
-            Let us guide you from Nepal to Japan step by step.
+            {t("services.process.btndes")}
           </p>
         </div>
       </div>

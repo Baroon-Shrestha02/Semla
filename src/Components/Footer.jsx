@@ -10,21 +10,23 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Our Services", href: "/services" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Contact Us", href: "/contact" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.about"), href: "/about" },
+    { name: t("nav.service"), href: "/services" },
+    { name: t("nav.gallery"), href: "/gallery" },
+    { name: t("nav.faq"), href: "/faq" },
   ];
 
   const legalLinks = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+    { name: t("footer.policy"), href: "#" },
+    { name: t("footer.term"), href: "#" },
   ];
 
   const socialLinks = [
@@ -74,9 +76,7 @@ export default function Footer() {
                 className="h-16 md:h-22 mb-4 bg-white rounded-2xl"
               />
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Your trusted partner in international education. We help
-                students achieve their dreams of studying abroad with
-                personalized guidance and expert support.
+                {t("footer.des")}
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function Footer() {
           {/* Quick Links - Column 2 */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">
-              Quick Links
+              {t("footer.quick")}
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -106,7 +106,7 @@ export default function Footer() {
           {/* Contact Information - Column 3 */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">
-              Contact Us
+              {t("footer.contact")}
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -147,7 +147,9 @@ export default function Footer() {
 
           {/* Embedded Map - Column 4 */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Find Us</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">
+              {t("footer.find")}
+            </h3>
             <a
               href="https://maps.app.goo.gl/8s5yTyu6oH1YMiJc8"
               target="_blank"
@@ -174,7 +176,7 @@ export default function Footer() {
             {/* Copyright and Legal Links */}
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
-                © {currentYear} SEMLA. All rights reserved.
+                © {currentYear} SEMLA. {t("footer.right")}.
               </p>
               <div className="flex items-center space-x-4">
                 {legalLinks.map((link, index) => (

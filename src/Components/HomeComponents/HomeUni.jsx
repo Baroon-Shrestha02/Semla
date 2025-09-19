@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { img } from "motion/react-client";
+import { useTranslation } from "react-i18next";
 
 const universities = [
   {
@@ -48,7 +49,7 @@ const universities = [
 export default function HomeUni() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef(null);
-
+  const { t } = useTranslation();
   const scroll = (direction) => {
     const container = scrollRef.current;
     if (!container) return;
@@ -75,21 +76,18 @@ export default function HomeUni() {
         </div>
         <div className="mb-8">
           <div className="capitalize max-w-5xl font-extrabold text-xl md:text-7xl text-white">
-            Discover{" "}
+            {t("home.uni.title1")}{" "}
             <span className="bg-primary text-secondary px-6 py-1 rounded-full rotate-4 inline-block">
-              Top Choices
+              {t("home.uni.title2")}
             </span>{" "}
             <span className="block mt-2">
-              represented by
+              {t("home.uni.title3")}
               <span className="bg-primary text-secondary px-6 py-1 rounded-full -rotate-4 inline-block">
                 SEMLA
               </span>
             </span>
           </div>
-          <p className="mt-4 text-white text-lg">
-            We have partnered with {universities.length}+ universities &
-            institutes in twelve countries.
-          </p>
+          <p className="mt-4 text-white text-lg">{t("home.uni.des")}</p>
         </div>
 
         {/* Carousel Container */}

@@ -10,120 +10,22 @@ import {
   Globe,
   Plane,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+const iconMap = {
+  BookOpen,
+  Award,
+  Users,
+  CheckCircle,
+  Globe,
+  Plane,
+};
 
 const ServicesCourses = () => {
   const [hoveredCourse, setHoveredCourse] = useState(null);
+  const { t } = useTranslation();
 
-  const courses = [
-    {
-      id: 1,
-      title: "JLPT Preparation Courses",
-      subtitle: "N5 to N1 Level Training",
-      description:
-        "Comprehensive Japanese Language Proficiency Test preparation with native instructors and proven methodologies.",
-      features: [
-        "All JLPT levels (N5-N1)",
-        "Native Japanese instructors",
-        "Practice tests & materials",
-        "Small class sizes",
-      ],
-      duration: "3-12 months",
-      icon: BookOpen,
-      color: "from-red-500 to-pink-600",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-200",
-    },
-    {
-      id: 2,
-      title: "Mock Test Series",
-      subtitle: "Realistic Exam Simulation",
-      description:
-        "Intensive mock test series designed to simulate actual JLPT and university entrance exam conditions.",
-      features: [
-        "Weekly mock tests",
-        "Detailed performance analysis",
-        "Time management training",
-        "Weakness identification",
-      ],
-      duration: "2-6 months",
-      icon: Award,
-      color: "from-blue-500 to-cyan-600",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200",
-    },
-    {
-      id: 3,
-      title: "SSW Courses",
-      subtitle: "Specialized Study/Work Program",
-      description:
-        "Structured programs combining academic studies and work opportunities in Japan, designed for international students seeking hands-on experience.",
-      features: [
-        "Work-study integration",
-        "Japanese language practice",
-        "Internship opportunities",
-        "Career guidance",
-      ],
-      duration: "6-12 months",
-      icon: Users,
-      color: "from-green-500 to-emerald-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
-    },
-    {
-      id: 4,
-      title: "Cultural Orientation Program",
-      subtitle: "Japanese Society & Customs",
-      description:
-        "Essential cultural training to help students adapt to Japanese society, customs, and academic environment.",
-      features: [
-        "Business etiquette",
-        "Social customs",
-        "Academic culture",
-        "Daily life preparation",
-      ],
-      duration: "1-3 months",
-      icon: Globe,
-      color: "from-purple-500 to-indigo-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
-    },
-    {
-      id: 5,
-      title: "TITP Visa Class",
-      subtitle: "Technical Intern Training Program",
-      description:
-        "Comprehensive guidance for TITP visa applicants, including training, documentation, and orientation for working opportunities in Japan.",
-      features: [
-        "Language & skill training",
-        "Visa documentation support",
-        "Job placement assistance",
-        "Pre-departure orientation",
-      ],
-      duration: "6-12 months",
-      icon: CheckCircle,
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
-    },
-    {
-      id: 6,
-      title: "Pre-Departure & Travel Preparation",
-      subtitle: "Preparing for Life in Japan",
-      description:
-        "A focused program to guide students through pre-departure preparations including accommodation, travel essentials, and cultural adaptation.",
-      features: [
-        "Travel documentation guidance",
-        "Accommodation assistance",
-        "Cultural workshops",
-        "Daily life orientation",
-      ],
-      duration: "2-4 weeks",
-      icon: Plane,
-      color: "from-teal-500 to-cyan-500",
-      bgColor: "bg-teal-50",
-      borderColor: "border-teal-200",
-    },
-  ];
+  const courses = t("services.course.courses", { returnObjects: true });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -131,18 +33,17 @@ const ServicesCourses = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Specialized Training Programs
+            {t("services.course.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From language proficiency to cultural adaptation, our comprehensive
-            courses prepare you for every aspect of studying in Japan
+            {t("services.course.subtitle")}
           </p>
         </div>
 
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {courses.map((course) => {
-            const IconComponent = course.icon;
+            const IconComponent = iconMap[course.icon];
             return (
               <div
                 key={course.id}

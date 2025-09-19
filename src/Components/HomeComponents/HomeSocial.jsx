@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Facebook, Instagram, Mail, Twitter, Youtube } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 export default function HomeSocial() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -92,9 +93,9 @@ export default function HomeSocial() {
               }`}
             >
               <h2 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Follow us on
+                {t("home.social.title")}
                 <span className="bg-primary text-secondary px-6  inline-block -rotate-4 rounded-full">
-                  Socials
+                  {t("home.social.title2")}
                 </span>
               </h2>
             </div>
@@ -107,8 +108,7 @@ export default function HomeSocial() {
               }`}
             >
               <p className="text-lg text-gray-600 leading-relaxed max-w-md">
-                Semla looks ahead with an expanded vision to be your lifelong
-                launch pad for realizing their highest potential.
+                {t("home.social.des")}
               </p>
             </div>
 
