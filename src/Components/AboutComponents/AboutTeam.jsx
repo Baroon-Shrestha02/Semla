@@ -9,17 +9,16 @@ const TeamCarousel = () => {
   const teamData = [
     {
       id: 1,
-      name: "Arjun Shrestha",
-      role: "CEO & Founder",
+      name: "Krishna Ghising",
+      role: "Chariman",
       description:
         "As the visionary behind the consultancy, Arjun Shrestha founded the organization with a mission to guide students towards brighter futures through quality education abroad. With years of experience in the field, he leads the team with dedication, ensuring every process is transparent and student-centered. His leadership combines strategic planning with personal mentorship, helping the consultancy grow while maintaining trust and credibility. He believes education is the bridge that transforms dreams into reality.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "About/chairman.jpg",
     },
     {
       id: 2,
-      name: "Sita Koirala",
-      role: "Front-Desk Officer",
+      name: "Dhiraj Lama",
+      role: "Director",
       description:
         "As the first point of contact for students and parents, Sita Koirala provides a welcoming environment that ensures comfort and trust. She handles inquiries, schedules appointments, and guides students through the initial steps of consultation. Her role is crucial in maintaining smooth communication between the team and clients. With her warm personality and professionalism, she sets the tone for positive experiences, making every visitor feel valued and supported from the very beginning.",
       image:
@@ -27,8 +26,8 @@ const TeamCarousel = () => {
     },
     {
       id: 3,
-      name: "Ramesh Adhikari",
-      role: "Document Officer",
+      name: "Bina Lama",
+      role: "Receptionist",
       description:
         "Ramesh Adhikari plays a vital role in ensuring that all student documents are prepared, verified, and submitted correctly. From academic transcripts to financial paperwork, he checks every detail with precision and care. His expertise helps students avoid delays and mistakes that could affect their applications. By maintaining accuracy and compliance with university and embassy requirements, he safeguards the credibility of the consultancy and contributes to the success of students pursuing studies abroad.",
       image:

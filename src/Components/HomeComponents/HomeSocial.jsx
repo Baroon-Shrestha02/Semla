@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Facebook, Instagram, Mail, Twitter, Youtube } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
+import { href } from "react-router-dom";
 
 export default function HomeSocial() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,42 +26,54 @@ export default function HomeSocial() {
   }, []);
 
   const socialIcons = [
-    { icon: Facebook, color: "text-blue-600" },
-    { icon: Instagram, color: "text-pink-600" },
-    { icon: BsWhatsapp, color: "text-green-400" },
-    { icon: Mail, color: "text-red-400" },
+    { icon: Facebook, color: "text-blue-600", href: "#" },
+    {
+      icon: Instagram,
+      color: "text-pink-600",
+      href: "https://www.instagram.com/semla.consultancy/?igsh=ejRrYm12NWk0aTF0#",
+    },
+    {
+      icon: BsWhatsapp,
+      color: "text-green-400",
+      href: "https://wa.me/9779813960567",
+    },
+    {
+      icon: Mail,
+      color: "text-red-400",
+      href: "mailto:info@semlaconsultancy.com",
+    },
   ];
 
   // Sample images for the grid - you can replace these with actual image URLs
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=200&fit=crop",
+      src: "Home/img6.jpeg",
       alt: "Classroom",
     },
     {
       id: 2,
-      src: "Home/social1.jpg",
+      src: "Home/img1.jpeg",
       alt: "Students studying",
     },
     {
       id: 3,
-      src: "Home/social2.jpg",
+      src: "Home/img2.jpeg",
       alt: "Professional woman",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=150&fit=crop",
+      src: "Home/img3.jpeg",
       alt: "Study group",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=300&h=200&fit=crop",
+      src: "Home/img4.jpeg",
       alt: "Classroom lecture",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=300&h=150&fit=crop",
+      src: "Home/img5.jpeg",
       alt: "Students discussion",
     },
   ];
@@ -128,7 +141,13 @@ export default function HomeSocial() {
                       index * 100
                     }`}
                   >
-                    <IconComponent className={`w-6 h-6 ${social.color}`} />
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IconComponent className={`w-6 h-6 ${social.color}`} />
+                    </a>
                   </div>
                 );
               })}

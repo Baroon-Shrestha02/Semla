@@ -303,7 +303,7 @@ export default function HomeVideo() {
                 autoPlay
                 className="w-full h-full"
               >
-                <source src="Home/Hero.mp4" type="video/mp4" />
+                <source src="Gallery/vid3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -313,7 +313,7 @@ export default function HomeVideo() {
               <h3 className="text-2xl font-bold text-white mb-2">Our Story</h3>
               <p className="text-gray-300">
                 Discover how SEMLA has been transforming dreams into reality,
-                helping students achieve their international education goals.
+                helping individuals achieve their international goals.
               </p>
             </div>
           </div>

@@ -52,27 +52,27 @@ export default function AboutIntro() {
   const images = [
     {
       id: 1,
-      src: "About/intro1.jpg",
+      src: "About/intro/img1.jpeg",
       alt: "Students collaborating",
     },
     {
       id: 2,
-      src: "About/intro2.jpg",
+      src: "About/intro/img2.jpeg",
       alt: "University campus",
     },
     {
       id: 3,
-      src: "About/intro3.jpg",
+      src: "About/intro/img3.jpeg",
       alt: "Classroom learning",
     },
     {
       id: 4,
-      src: "About/ori.jpeg",
+      src: "About/intro/img4.jpeg",
       alt: "Professional consultation",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=350&h=250&fit=crop",
+      src: "About/intro/img5.jpeg",
       alt: "Study session",
     },
   ];

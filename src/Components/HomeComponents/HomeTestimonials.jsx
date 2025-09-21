@@ -9,44 +9,7 @@ export default function HomeTestimonials() {
   const sectionRef = useRef(null);
   const { t } = useTranslation();
 
-  const testimonials = [
-    {
-      id: 1,
-      rating: 5,
-      text: "I had no idea where to start with my university applications, and the thought of studying abroad felt overwhelming. The consultancy walked me through every step, from selecting the right courses to preparing a strong SOP and CV. They even helped me practice mock interviews, which boosted my confidence immensely. Thanks to their guidance, I got accepted into my dream university with a scholarship!",
-      author: "Aarav Shrestha",
-      position: "Undergraduate Student",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face",
-    },
-    {
-      id: 2,
-      rating: 5,
-      text: "Preparing for exams like IELTS and TOEFL was stressful, and I wasn’t sure how to improve my scores effectively. The consultancy provided personalized coaching, identified my weak areas, and gave practical strategies to enhance my performance. Their constant support and encouragement made the learning process enjoyable, and I achieved scores higher than I expected!",
-      author: "Priya Thapa",
-      position: "Graduate Student",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face",
-    },
-    {
-      id: 3,
-      rating: 5,
-      text: "From day one, the consultants treated me like a priority. They carefully analyzed my academic background, suggested programs that fit my goals, and helped me craft compelling essays that truly reflected my personality. Their expertise and attention to detail made the entire application process smooth and stress-free. I’m now enrolled in a top-ranked university, and I couldn’t be happier!",
-      author: "Rohan Koirala",
-      position: "Masters Student",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face",
-    },
-    {
-      id: 4,
-      rating: 5,
-      text: "The consultancy didn’t just help me with applications—they empowered me to understand the entire process of studying abroad. They guided me through scholarship applications, helped me perfect my interview skills, and provided ongoing support even after my admission. Their professionalism, patience, and personalized approach made a huge difference in my journey. I truly felt supported every step of the way!",
-      author: "Sanya Acharya",
-      position: "Undergraduate Student",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=60&h=60&fit=crop&crop=face",
-    },
-  ];
+  const testimonials = t("home.testimonials", { returnObjects: true });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -146,7 +109,7 @@ export default function HomeTestimonials() {
               }`}
             >
               <img
-                src="Home/stories.jpg"
+                src="Home/test.jpeg"
                 alt="Nature landscape"
                 className="w-full h-[400px] md:h-[600px] object-cover"
               />
@@ -204,16 +167,12 @@ export default function HomeTestimonials() {
                   </p>
 
                   {/* Author Info */}
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.author}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-current opacity-90"
-                    />
+                  <div className="flex items-center space-x-4 border-t-4">
                     <div>
                       <div className="font-semibold text-lg">
                         {testimonial.author}
                       </div>
+                      <div className="font-extralight">{testimonial.role}</div>
                     </div>
                   </div>
                 </div>

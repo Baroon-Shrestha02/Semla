@@ -9,7 +9,7 @@ export default function AboutHero() {
       title={t("about.hero.heading")}
       description={t("about.hero.subheading")}
       backgroundType="image"
-      backgroundSrc="About/hero.jpg"
+      backgroundSrc="About/hero2.jpeg"
       height="70vh"
       overlay="gradient"
       textAlignment="bottom-left"

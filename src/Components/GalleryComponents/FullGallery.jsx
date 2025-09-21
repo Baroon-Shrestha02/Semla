@@ -64,7 +64,9 @@ export default function FullGallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const { t } = useTranslation();
+
   // Check if mobile on mount and resize
   useEffect(() => {
     const checkMobile = () => {
@@ -85,57 +87,160 @@ export default function FullGallery() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Dummy images from Unsplash
+  // Media files with categories
   const mediaFiles = [
     {
-      src: "Uni/uni1.jpeg",
+      src: "Gallery/img1.jpeg",
       alt: "Classroom learning",
       title: "Interactive Learning Session",
       type: "image",
+      category: "Travel",
     },
     {
-      src: "Uni/uni2.jpeg",
+      src: "Gallery/img2.jpeg",
       alt: "Students working together",
       title: "Group Collaboration",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni3.jpeg",
+      src: "Gallery/img3.jpeg",
       alt: "Festival celebration",
       title: "Cultural Festival",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni4.jpeg",
+      src: "Gallery/img4.jpeg",
       alt: "Airport departure",
       title: "Airport Journey",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni5.jpeg",
+      src: "Gallery/img5.jpeg",
       alt: "Business meeting",
       title: "Student Meetup",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni6.jpeg",
+      src: "Gallery/img6.jpeg",
       alt: "Community event",
       title: "Annual Gathering",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni7.jpeg",
+      src: "Gallery/img7.jpeg",
       alt: "Celebration moment",
       title: "Special Celebration",
       type: "image",
+      category: "Celebrations",
     },
     {
-      src: "Uni/uni8.jpeg",
+      src: "Gallery/img8.jpeg",
       alt: "Traveling students",
       title: "Journey Abroad",
       type: "image",
+      category: "Events",
+    },
+    {
+      src: "Gallery/img9.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Events",
+    },
+    {
+      src: "Gallery/img10.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Events",
+    },
+    {
+      src: "Gallery/img11.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img12.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img13.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img14.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img15.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img16.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/img17.jpeg",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "image",
+      category: "Travel",
+    },
+    {
+      src: "Gallery/vid1.mp4",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "video",
+      category: "Celebrations",
+    },
+    {
+      src: "Gallery/vid2.mp4",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "video",
+      category: "Events",
+    },
+    {
+      src: "Gallery/vid3.mp4",
+      alt: "Traveling students",
+      title: "Journey Abroad",
+      type: "video",
+      category: "Academics",
     },
   ];
+
+  const categories = [
+    "All",
+    ...new Set(mediaFiles.map((file) => file.category)),
+  ];
+
+  // Filtered files
+  const filteredFiles =
+    selectedCategory === "All"
+      ? mediaFiles
+      : mediaFiles.filter((file) => file.category === selectedCategory);
 
   const openModal = (index) => {
     setSelectedIndex(index);
@@ -148,15 +253,19 @@ export default function FullGallery() {
   };
 
   const nextMedia = () =>
-    setSelectedIndex((prev) => (prev + 1) % mediaFiles.length);
-  const prevMedia = () =>
-    setSelectedIndex((prev) => (prev === 0 ? mediaFiles.length - 1 : prev - 1));
+    setSelectedIndex((prev) => (prev + 1) % filteredFiles.length);
 
-  const renderResponsiveGrid = () => {
+  const prevMedia = () =>
+    setSelectedIndex((prev) =>
+      prev === 0 ? filteredFiles.length - 1 : prev - 1
+    );
+
+  // Grid render
+  const renderResponsiveGrid = (files) => {
     if (isMobile) {
       return (
         <div className="grid grid-cols-2 gap-3">
-          {mediaFiles.map((file, index) => (
+          {files.map((file, index) => (
             <div
               key={index}
               className="cursor-pointer relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
@@ -170,13 +279,13 @@ export default function FullGallery() {
         </div>
       );
     } else {
-      return renderImprovedMasonry();
+      return renderImprovedMasonry(files);
     }
   };
 
-  const renderImprovedMasonry = () => {
+  const renderImprovedMasonry = (files) => {
     const columns = [[], [], [], []];
-    mediaFiles.forEach((file, i) => {
+    files.forEach((file, i) => {
       const shortestIndex = columns.reduce(
         (minIndex, col, index, arr) =>
           col.length < arr[minIndex].length ? index : minIndex,
@@ -222,7 +331,7 @@ export default function FullGallery() {
         title={t("gallery.hero.heading")}
         description={t("gallery.hero.subheading")}
         backgroundType="image"
-        backgroundSrc="Gallery/hero.jpg"
+        backgroundSrc="Gallery/img12.jpeg"
         height="70vh"
         overlay="gradient"
         textAlignment="bottom-left"
@@ -230,11 +339,31 @@ export default function FullGallery() {
       />
 
       <div className="container mx-auto my-10 px-4 md:px-8">
+        {/* Category Filter */}
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+        ${
+          selectedCategory === cat
+            ? "bg-secondary text-white shadow-md"
+            : "text-gray-700 hover:bg-secondary hover:text-white"
+        }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         {isLoading ? (
           <GallerySkeletonGrid count={12} />
-        ) : mediaFiles.length > 0 ? (
+        ) : filteredFiles.length > 0 ? (
           <div className="opacity-100 transition-opacity duration-600">
-            {layoutType === "improved-masonry" && renderResponsiveGrid()}
+            {layoutType === "improved-masonry" &&
+              renderResponsiveGrid(filteredFiles)}
           </div>
         ) : (
           <div className="text-center py-20">
@@ -265,15 +394,15 @@ export default function FullGallery() {
             <ChevronLeft size={32} />
           </button>
           <div className="max-w-6xl max-h-[85vh] mx-auto relative">
-            {mediaFiles[selectedIndex].type === "image" ? (
+            {filteredFiles[selectedIndex].type === "image" ? (
               <img
-                src={mediaFiles[selectedIndex].src}
-                alt={mediaFiles[selectedIndex].alt}
+                src={filteredFiles[selectedIndex].src}
+                alt={filteredFiles[selectedIndex].alt}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
               />
             ) : (
               <video
-                src={mediaFiles[selectedIndex].src}
+                src={filteredFiles[selectedIndex].src}
                 autoPlay
                 muted
                 loop

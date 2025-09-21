@@ -133,7 +133,7 @@ export default function HomeIntro() {
                 muted
                 loop
                 playsInline
-                poster="/Main/logo.png"
+                poster="/Gallery/airport.jpeg"
               >
                 <source src="/Home/Hero.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

@@ -123,7 +123,69 @@
           "description": "Strong connections with 200+ institutions and companies worldwide."
         }
       }
-    }
+    },
+    "testimonials": [
+      {
+        "rating": 5,
+        "text": "The consultancy guided me through every step of my student visa journey. From Japanese language classes to cultural orientation, I felt prepared before departure. Once I arrived in Japan, I was able to adjust quickly to daily life and succeed in my university studies with confidence.",
+        "author": "Aarav Shrestha",
+        "role": "Student Visa Holder"
+      },
+      {
+        "rating": 5,
+        "text": "I applied for the SSW program, and the training sessions really prepared me for both the skill exam and workplace expectations in Japan. Learning about Japanese culture before departure helped me integrate smoothly, and now I am working in the caregiving sector with great satisfaction.",
+        "author": "Priya Thapa",
+        "role": "SSW Worker – Caregiving"
+      },
+      {
+        "rating": 5,
+        "text": "Through the TITP program, I received practical training before departure that matched the industry I was joining in Japan. Once I arrived, I realized how useful the skills and language training were. It made me confident in my workplace and allowed me to contribute effectively from the very first week.",
+        "author": "Rohan Koirala",
+        "role": "TITP Trainee – Manufacturing"
+      },
+      {
+        "rating": 5,
+        "text": "The consultancy didn’t just handle paperwork—they prepared me for real life in Japan. From mock interviews to pre-departure cultural sessions, I gained valuable knowledge. After arriving in Japan as a student, I found part-time work easily and could balance study and work thanks to their guidance.",
+        "author": "Sanya Acharya",
+        "role": "Student Visa Holder"
+      },
+      {
+        "rating": 5,
+        "text": "As an SSW participant in the hospitality sector, I was nervous about adapting to Japanese workplace culture. But the language and etiquette training I received before departure gave me confidence. Now I am thriving in my role and enjoying the opportunity to grow professionally in Japan.",
+        "author": "Kiran Tamang",
+        "role": "SSW Worker – Hospitality"
+      },
+      {
+        "rating": 5,
+        "text": "Joining the TITP program was one of the best decisions I made. The consultancy trained me in both technical and cultural skills. After arriving in Japan, I could communicate with my colleagues and adapt to the workplace environment without difficulty. It has been a life-changing experience.",
+        "author": "Manisha Rai",
+        "role": "TITP Trainee – Agriculture"
+      },
+      {
+        "rating": 5,
+        "text": "When I applied for a student visa, I was worried about managing studies and living in Japan. The consultancy not only helped with university admission but also prepared me with part-time work training. After arriving, I managed my expenses smoothly and enjoyed both study and work life.",
+        "author": "Nischal Adhikari",
+        "role": "Student Visa Holder"
+      },
+      {
+        "rating": 5,
+        "text": "The consultancy helped me prepare for the SSW skill test in construction. Their practice sessions and mock exams made the real test feel much easier. After arriving in Japan, the pre-departure training helped me understand Japanese safety rules and work culture, making my transition smooth.",
+        "author": "Deepak Sunar",
+        "role": "SSW Worker – Construction"
+      },
+      {
+        "rating": 5,
+        "text": "I joined TITP for technical training in the food processing sector. Before departure, I was trained in hygiene, workplace discipline, and Japanese basics. This made it much easier for me to adapt when I arrived. Now, I feel confident in my role and thankful for the support I received.",
+        "author": "Pooja Gurung",
+        "role": "TITP Trainee – Food Processing"
+      },
+      {
+        "rating": 5,
+        "text": "What impressed me the most was the ongoing support even after arriving in Japan. As a student, I faced challenges at first, but the consultancy connected me with part-time opportunities and provided advice whenever I needed it. Their guidance gave me the courage to overcome difficulties abroad.",
+        "author": "Samir Shahi",
+        "role": "Student Visa Holder"
+      }
+    ]
   },
   "about": {
     "hero": {
@@ -209,7 +271,7 @@
         "accentColor": "text-purple-600",
         "gradientFrom": "from-purple-500",
         "gradientTo": "to-pink-600",
-        "image": "About/mission.png"
+        "image": "Gallery/airport.jpeg"
       }
     ],
     "why": {
