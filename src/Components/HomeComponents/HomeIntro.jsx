@@ -128,14 +128,14 @@ export default function HomeIntro() {
             {/* Video Container */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <video
-                className="w-full h-auto"
+                className="w-full h-[75vh]"
                 autoPlay
                 muted
                 loop
                 playsInline
                 poster="/Gallery/airport.jpeg"
               >
-                <source src="/Home/Hero.mp4" type="video/mp4" />
+                <source src="/Home/intro.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
