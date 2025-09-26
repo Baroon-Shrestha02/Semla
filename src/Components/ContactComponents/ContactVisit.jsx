@@ -13,7 +13,8 @@ export default function ContactVisit() {
   ];
 
   const address = "Chabahil, Kathmandu, Nepal";
-  const phoneNumber = "+977 9813960567";
+  const mobileNumber = "+977 9762588549";
+  const landlineNumber = "01-4534143";
 
   const handleGetDirections = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -22,9 +23,14 @@ export default function ContactVisit() {
     window.open(googleMapsUrl, "_blank");
   };
 
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(phoneNumber);
-    alert(`Phone number copied: ${phoneNumber}`);
+  const handleCopyMobile = () => {
+    navigator.clipboard.writeText(mobileNumber);
+    alert(`Mobile number copied: ${mobileNumber}`);
+  };
+
+  const handleCopyLandline = () => {
+    navigator.clipboard.writeText(landlineNumber);
+    alert(`Landline number copied: ${landlineNumber}`);
   };
 
   const handleOpenMap = () => {
@@ -97,21 +103,35 @@ export default function ContactVisit() {
                 </div>
               </motion.div>
 
-              {/* Phone */}
+              {/* Mobile Phone */}
               <motion.div
                 className="flex items-start space-x-4 cursor-pointer"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                onClick={handleCopyPhone}
+                onClick={handleCopyMobile}
               >
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900 mb-1">
-                    {t("contact.visit.left.phone")}
-                  </h5>
-                  <p className="text-gray-600">{phoneNumber}</p>
+                  <h5 className="font-semibold text-gray-900 mb-1">Mobile</h5>
+                  <p className="text-gray-600">{mobileNumber}</p>
+                </div>
+              </motion.div>
+
+              {/* Landline Phone */}
+              <motion.div
+                className="flex items-start space-x-4 cursor-pointer"
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                onClick={handleCopyLandline}
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-900 mb-1">Landline</h5>
+                  <p className="text-gray-600">{landlineNumber}</p>
                 </div>
               </motion.div>
 

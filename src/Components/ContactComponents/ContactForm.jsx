@@ -82,7 +82,7 @@ ${formData.message}
 Sent from Semla Educational Consultancy website`;
 
     // WhatsApp number (replace with your actual WhatsApp number)
-    const whatsappNumber = "9779813960567"; // Replace with your WhatsApp number
+    const whatsappNumber = "9779762588549"; // Replace with your WhatsApp number
 
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -115,27 +115,38 @@ Sent from Semla Educational Consultancy website`;
   const contactInfo = [
     {
       icon: Phone,
-      title: t("contact.form.contactinfo.call"),
-      content: "+977 9813960567",
+      title: "Mobile",
+      content: "+977 9762588549",
       color: "text-blue-600",
+      type: "phone",
+    },
+    {
+      icon: Phone,
+      title: "Landline",
+      content: "+01-4534143",
+      color: "text-blue-600",
+      type: "phone",
     },
     {
       icon: MessageCircle,
       title: t("contact.form.contactinfo.whatsapp"),
-      content: "+977 9813960567",
+      content: "+977 9762588549",
       color: "text-green-600",
+      type: "whatsapp",
     },
     {
       icon: Mail,
       title: t("contact.form.contactinfo.mail"),
       content: "info@semlaconsultancy.com",
       color: "text-purple-600",
+      type: "email",
     },
     {
       icon: MapPin,
       title: t("contact.form.contactinfo.address"),
       content: "Chabahil, Kathmandu, Nepal",
       color: "text-red-600",
+      type: "address",
     },
   ];
 
@@ -179,58 +190,124 @@ Sent from Semla Educational Consultancy website`;
 
             {/* Contact Cards */}
             {/* Contact Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {contactInfo.map((info, index) => {
-                const IconComponent = info.icon;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Top 3 cards */}
+              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {contactInfo.slice(0, 3).map((info, index) => {
+                  const IconComponent = info.icon;
 
-                // Handle click based on type
-                const handleClick = () => {
-                  if (info.title === "Call Us" || info.title === "WhatsApp") {
-                    navigator.clipboard.writeText(info.content);
-                    toast.success(
-                      `${info.title} number copied: ${info.content}`
-                    );
-                  } else if (info.title === "Email") {
-                    window.location.href = `mailto:${info.content}`;
-                  } else if (info.title === "Address") {
-                    // Open Google Maps
-                    window.open(
-                      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                        info.content
-                      )}`,
-                      "_blank"
-                    );
-                  }
-                };
+                  // Handle click based on type
+                  const handleClick = () => {
+                    if (info.type === "phone") {
+                      navigator.clipboard.writeText(info.content);
+                      toast.success(
+                        `${info.title} number copied: ${info.content}`
+                      );
+                    } else if (info.type === "whatsapp") {
+                      // Redirect to WhatsApp
+                      const whatsappUrl = `https://wa.me/9779762588549`;
+                      window.open(whatsappUrl, "_blank");
+                    } else if (info.type === "email") {
+                      window.location.href = `mailto:${info.content}`;
+                    } else if (info.type === "address") {
+                      // Open Google Maps
+                      window.open(
+                        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                          info.content
+                        )}`,
+                        "_blank"
+                      );
+                    }
+                  };
 
-                return (
-                  <motion.div
-                    key={index}
-                    onClick={handleClick}
-                    className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 cursor-pointer"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -2 }}
-                  >
-                    <div
-                      className={`w-12 h-12 ${info.color
-                        .replace("text-", "bg-")
-                        .replace(
-                          "-600",
-                          "-100"
-                        )} rounded-lg flex items-center justify-center mb-4`}
+                  return (
+                    <motion.div
+                      key={index}
+                      onClick={handleClick}
+                      className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 cursor-pointer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      whileHover={{ y: -2 }}
                     >
-                      <IconComponent className={`w-6 h-6 ${info.color}`} />
-                    </div>
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {info.title}
-                    </h4>
-                    <p className="text-gray-600">{info.content}</p>
-                  </motion.div>
-                );
-              })}
+                      <div
+                        className={`w-12 h-12 ${info.color
+                          .replace("text-", "bg-")
+                          .replace(
+                            "-600",
+                            "-100"
+                          )} rounded-lg flex items-center justify-center mb-4`}
+                      >
+                        <IconComponent className={`w-6 h-6 ${info.color}`} />
+                      </div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        {info.title}
+                      </h4>
+                      <p className="text-gray-600">{info.content}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom 2 cards */}
+              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {contactInfo.slice(3, 5).map((info, index) => {
+                  const IconComponent = info.icon;
+
+                  // Handle click based on type
+                  const handleClick = () => {
+                    if (info.type === "phone") {
+                      navigator.clipboard.writeText(info.content);
+                      toast.success(
+                        `${info.title} number copied: ${info.content}`
+                      );
+                    } else if (info.type === "whatsapp") {
+                      // Redirect to WhatsApp
+                      const whatsappUrl = `https://wa.me/9779762588549`;
+                      window.open(whatsappUrl, "_blank");
+                    } else if (info.type === "email") {
+                      window.location.href = `mailto:${info.content}`;
+                    } else if (info.type === "address") {
+                      // Open Google Maps
+                      window.open(
+                        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                          info.content
+                        )}`,
+                        "_blank"
+                      );
+                    }
+                  };
+
+                  return (
+                    <motion.div
+                      key={index + 3}
+                      onClick={handleClick}
+                      className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 cursor-pointer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+                      viewport={{ once: true }}
+                      whileHover={{ y: -2 }}
+                    >
+                      <div
+                        className={`w-12 h-12 ${info.color
+                          .replace("text-", "bg-")
+                          .replace(
+                            "-600",
+                            "-100"
+                          )} rounded-lg flex items-center justify-center mb-4`}
+                      >
+                        <IconComponent className={`w-6 h-6 ${info.color}`} />
+                      </div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        {info.title}
+                      </h4>
+                      <p className="text-gray-600">{info.content}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Why Choose Us */}

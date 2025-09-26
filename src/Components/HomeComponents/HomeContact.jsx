@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Phone,
   Mail,
@@ -16,35 +16,16 @@ import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
 export default function HomeContact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   const { t } = useTranslation();
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
 
   const contactMethods = [
     {
       icon: Phone,
       title: t("home.contact.det.call"),
-      primary: "+977 9813960567",
+      primary: "+977 9762588549",
+      secondary: "+01-4534143",
       description: "Mon-Fri 9AM-6PM",
-      action: "tel:+9779813960567",
+      action: "tel:+977 9762588549",
       color: "bg-blue-100 text-blue-600",
     },
     {
@@ -58,10 +39,11 @@ export default function HomeContact() {
     {
       icon: MessageCircle,
       title: t("home.contact.det.whatsapp"),
-      primary: "+977 9813960567",
+      primary: "+977 9762588549",
       description: "Available 24/7",
-      action: "https://wa.me/9779813960567",
+      action: "https://wa.me/9779762588549",
       color: "bg-emerald-100 text-emerald-600",
+      isWhatsApp: true,
     },
   ];
 
@@ -168,12 +150,7 @@ export default function HomeContact() {
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
                   onClick={() => {
-                    if (method.icon === Phone) {
-                      navigator.clipboard.writeText(method.primary);
-                      toast.success(
-                        `Phone number ${method.primary} copied to clipboard!`
-                      );
-                    } else if (method.icon === Mail) {
+                    if (method.icon === Mail) {
                       window.location.href = `mailto:${method.primary}`;
                     } else if (method.icon === MessageCircle) {
                       window.open(method.action, "_blank");
@@ -188,9 +165,50 @@ export default function HomeContact() {
                       <h3 className="font-semibold text-gray-800 mb-2">
                         {method.title}
                       </h3>
-                      <p className="text-gray-800 font-medium">
-                        {method.primary}
-                      </p>
+                      <div className="space-y-1">
+                        {method.isWhatsApp ? (
+                          <p
+                            className="text-gray-800 font-medium hover:text-emerald-600 transition-colors cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(method.action, "_blank");
+                            }}
+                          >
+                            {method.primary}
+                          </p>
+                        ) : (
+                          <>
+                            <p
+                              className="text-gray-800 font-medium hover:text-blue-600 transition-colors cursor-pointer"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                navigator.clipboard.writeText(method.primary);
+                                toast.success(
+                                  `Phone number ${method.primary} copied to clipboard!`
+                                );
+                              }}
+                            >
+                              {method.primary}
+                            </p>
+                            {method.secondary && (
+                              <p
+                                className="text-gray-600 text-md hover:text-blue-600 transition-colors cursor-pointer"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  navigator.clipboard.writeText(
+                                    method.secondary
+                                  );
+                                  toast.success(
+                                    `Phone number ${method.secondary} copied to clipboard!`
+                                  );
+                                }}
+                              >
+                                {method.secondary}
+                              </p>
+                            )}
+                          </>
+                        )}
+                      </div>
                     </div>
                     <div className="bg-gray-100 p-2 rounded-lg">
                       <ExternalLink className="w-4 h-4 text-gray-600" />

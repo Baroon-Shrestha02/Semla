@@ -26,7 +26,11 @@ export default function HomeSocial() {
   }, []);
 
   const socialIcons = [
-    { icon: Facebook, color: "text-blue-600", href: "#" },
+    {
+      icon: Facebook,
+      color: "text-blue-600",
+      href: "https://www.facebook.com/people/Semla-Educational-Consultancy-Pvt-Ltd/61581247828180/",
+    },
     {
       icon: Instagram,
       color: "text-pink-600",
@@ -35,7 +39,7 @@ export default function HomeSocial() {
     {
       icon: BsWhatsapp,
       color: "text-green-400",
-      href: "https://wa.me/9779813960567",
+      href: "https://wa.me/9779762588549",
     },
     {
       icon: Mail,

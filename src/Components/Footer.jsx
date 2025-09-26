@@ -44,7 +44,11 @@ export default function Footer() {
   ];
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText("+9779813960567");
+    navigator.clipboard.writeText("+977 9762588549");
+    toast.success("Phone number copied to clipboard!");
+  };
+  const handleCopytelPhone = () => {
+    navigator.clipboard.writeText("+01-4534143");
     toast.success("Phone number copied to clipboard!");
   };
 
@@ -123,13 +127,19 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div
-                className="flex items-center space-x-3 cursor-pointer"
-                onClick={handleCopyPhone}
-              >
+              <div className="flex items-center space-x-3 cursor-pointer">
                 <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm hover:text-green-400 transition-colors">
-                  +977 9813960567
+                <span
+                  className="text-gray-300 text-sm hover:text-green-400 transition-colors"
+                  onClick={handleCopyPhone}
+                >
+                  +977 9762588549
+                </span>
+                <span
+                  className="text-gray-300 text-sm hover:text-green-400 transition-colors"
+                  onClick={handleCopytelPhone}
+                >
+                  +01-4534143
                 </span>
               </div>
 
@@ -193,23 +203,6 @@ export default function Footer() {
                   </React.Fragment>
                 ))}
               </div>
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-400 text-sm mr-2">Follow us:</span>
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
             </div>
           </div>
         </div>

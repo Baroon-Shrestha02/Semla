@@ -210,7 +210,15 @@ export default function Navbar() {
                 <p className="text-sm text-gray-500 mb-4">
                   Follow us on social media
                 </p>
-                <div className="flex space-x-4">
+                <Link to="/contact">
+                  <button
+                    className="bg-secondary text-white w-full py-2 rounded-xl text-lg md:text-xl "
+                    onClick={toggleSidebar}
+                  >
+                    Reach Us Out
+                  </button>
+                </Link>
+                {/* <div className="flex space-x-4">
                   {["Facebook", "Twitter", "Instagram"].map((social, index) => (
                     <motion.a
                       key={social}
@@ -224,7 +232,7 @@ export default function Navbar() {
                       {social}
                     </motion.a>
                   ))}
-                </div>
+                </div> */}
               </motion.div>
             </div>
           </motion.div>

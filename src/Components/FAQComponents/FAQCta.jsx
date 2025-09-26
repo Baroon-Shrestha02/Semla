@@ -9,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function EnhancedFAQCta() {
   const [isHovered, setIsHovered] = useState(false);
@@ -110,34 +111,36 @@ export default function EnhancedFAQCta() {
               transition={{ duration: 0.6, delay: 1.2 }}
               className="flex flex-col gap-4 justify-center items-center"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onHoverStart={() => setIsHovered(true)}
-                onHoverEnd={() => setIsHovered(false)}
-                className="group relative bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  <motion.div
-                    animate={{ x: isHovered ? 5 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {/* <ArrowRight className="w-5 h-5" /> */}
-                    {t("faq.cta.team")}
-                  </motion.div>
-                </span>
+              <Link to="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onHoverStart={() => setIsHovered(true)}
+                  onHoverEnd={() => setIsHovered(false)}
+                  className="group relative bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center gap-3">
+                    <motion.div
+                      animate={{ x: isHovered ? 5 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {/* <ArrowRight className="w-5 h-5" /> */}
+                      {t("faq.cta.team")}
+                    </motion.div>
+                  </span>
 
-                {/* Button background effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50"
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{
-                    scale: isHovered ? 1 : 0,
-                    opacity: isHovered ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
+                  {/* Button background effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50"
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{
+                      scale: isHovered ? 1 : 0,
+                      opacity: isHovered ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              </Link>
 
               <div className="flex items-center gap-2 text-blue-200">
                 <Users className="w-4 h-4" />
