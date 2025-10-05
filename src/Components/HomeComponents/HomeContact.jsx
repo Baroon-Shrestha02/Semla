@@ -24,7 +24,7 @@ export default function HomeContact() {
       title: t("home.contact.det.call"),
       primary: "+977 9762588549",
       secondary: "+01-4534143",
-      description: "Mon-Fri 9AM-6PM",
+      description: "Mon-Fri 6:00 AM-6:00 PM",
       action: "tel:+977 9762588549",
       color: "bg-blue-100 text-blue-600",
     },

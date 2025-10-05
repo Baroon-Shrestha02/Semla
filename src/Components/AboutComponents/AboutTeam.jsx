@@ -10,9 +10,9 @@ const TeamCarousel = () => {
     {
       id: 1,
       name: "Krishna Ghising",
-      role: "Chariman",
+      role: "Chairman",
       description:
-        "As the visionary behind the consultancy, Arjun Shrestha founded the organization with a mission to guide students towards brighter futures through quality education abroad. With years of experience in the field, he leads the team with dedication, ensuring every process is transparent and student-centered. His leadership combines strategic planning with personal mentorship, helping the consultancy grow while maintaining trust and credibility. He believes education is the bridge that transforms dreams into reality.",
+        "Beginning his journey as a student in Japan, Mr. Krishna Ghising gained first-hand experience of studying abroad. Over the years, he built strong expertise in SSW, TITP, and visa & immigration processes, with more than 8 years of dedicated experience in the field. He has worked as a Foreigner Requirement Officer as well as a translator and interpreter, establishing valuable connections with many companies and schools in Japan. His strong network and professional background ensure that students and individuals receive reliable guidance and support. With his leadership, applicants can move forward with confidence, knowing that their educational and career opportunities abroad are in trustworthy hands.",
       image: "About/chairman.jpg",
     },
     {
@@ -20,54 +20,36 @@ const TeamCarousel = () => {
       name: "Dhiraj Lama",
       role: "Director",
       description:
-        "As the first point of contact for students and parents, Sita Koirala provides a welcoming environment that ensures comfort and trust. She handles inquiries, schedules appointments, and guides students through the initial steps of consultation. Her role is crucial in maintaining smooth communication between the team and clients. With her warm personality and professionalism, she sets the tone for positive experiences, making every visitor feel valued and supported from the very beginning.",
+        "With over 5 years of experience residing in Japan, Mr. Dhiraj Lama brings invaluable knowledge about Japanese culture, lifestyle, rules, and regulations. His personal journey abroad allows him to guide students with practical insights that go beyond books and documents, giving them a clear picture of what to expect before starting their future in Japan. As a director, he plays a vital role in bridging the gap between students’ aspirations and real-life experiences. From cultural orientation to day-to-day life guidance, he ensures that students are well-prepared and confident in their decision to study or work abroad. His approachable nature and expertise make the process trustworthy, assuring students and their families that they are in capable hands throughout their journey.",
       image:
-        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=500&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=400&h=500&fit=crop&crop=face",
     },
     {
       id: 3,
       name: "Bina Lama",
       role: "Receptionist",
       description:
-        "Ramesh Adhikari plays a vital role in ensuring that all student documents are prepared, verified, and submitted correctly. From academic transcripts to financial paperwork, he checks every detail with precision and care. His expertise helps students avoid delays and mistakes that could affect their applications. By maintaining accuracy and compliance with university and embassy requirements, he safeguards the credibility of the consultancy and contributes to the success of students pursuing studies abroad.",
+        "As the first point of contact at the consultancy, Ms. Bina Lama ensures that every student and visitor is welcomed with warmth and professionalism. She plays an important role in creating a friendly and organized environment where students feel comfortable and supported from the very beginning. Beyond handling front-desk responsibilities, she assists in guiding students through initial inquiries and directs them to the right services with clarity and care. Her dedication to communication and coordination helps maintain a smooth flow between the team and clients, ensuring that no student feels uncertain or left behind. Through her approachable nature and efficiency, she contributes greatly to building trust and positive experiences for everyone who walks through the door.",
       image:
-        "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=400&h=500&fit=crop&crop=face",
-    },
-    {
-      id: 4,
-      name: "Maya Gurung",
-      role: "Counsellor",
-      description:
-        "As a student counsellor, Maya Gurung dedicates her time to understanding the aspirations and concerns of every learner. She carefully analyzes each student’s profile, offering guidance on the right courses, universities, and countries that match their goals. Her approach balances professional expertise with personal empathy, ensuring students feel confident in their decisions. She also provides ongoing support, from preparation to departure, making her an invaluable mentor throughout the study abroad journey.",
-      image:
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=500&fit=crop&crop=face",
     },
     {
       id: 5,
-      name: "Bikash Thapa",
+      name: "Lakshya Tamang",
       role: "Instructor",
       description:
-        "Dedicated to shaping the academic foundation of students, Bikash Thapa conducts training sessions that focus on language skills and test preparation. He believes that strong communication and critical thinking abilities are essential for success in global education. His teaching style emphasizes practical learning, interactive exercises, and confidence building. Beyond academics, he motivates students to adapt to new cultures and environments, preparing them to excel not only in their studies but also in life abroad.",
+        "Mr. Lakshya Tamang is a dedicated Japanese language instructor who helps students build a strong foundation in communication skills essential for studying and working in Japan. With a focus on both language proficiency and cultural understanding, his classes are designed to prepare students for real-life situations abroad. He emphasizes interactive learning, practical exercises, and confidence-building techniques, ensuring students can adapt smoothly to new environments. Beyond academics, he motivates learners to embrace Japanese culture and lifestyle, guiding them to succeed not only in their studies but also in their professional and personal journeys overseas.",
       image:
         "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
     },
     {
       id: 6,
-      name: "Anjali Maharjan",
+      name: "Bimala Ghising",
       role: "Instructor",
       description:
-        "Anjali Maharjan is passionate about helping students strengthen their academic and language skills for international opportunities. Her classes are designed to be engaging, comprehensive, and student-focused, ensuring that learners grasp concepts effectively. She uses practical examples, exercises, and constructive feedback to create an interactive learning environment. Her dedication goes beyond the classroom, as she continuously encourages students to stay disciplined, motivated, and confident while preparing for the challenges of studying overseas.",
+        "Ms. Bimala Ghising brings passion and expertise as a Japanese language instructor, committed to equipping students with the skills they need for success abroad. Her teaching approach combines structured lessons with engaging, interactive activities that make learning both effective and enjoyable. She ensures students not only master grammar and vocabulary but also gain cultural insights that prepare them for life in Japan. By offering personalized guidance and continuous encouragement, she helps learners stay motivated and confident, building the discipline required to achieve their academic and career goals in an international setting.",
       image:
         "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=face",
-    },
-    {
-      id: 7,
-      name: "Kiran Lama",
-      role: "Instructor",
-      description:
-        "With a strong background in education and training, Kiran Lama focuses on equipping students with the skills they need to succeed in foreign universities. He believes in creating a balanced learning environment where theory and practice go hand in hand. His teaching emphasizes discipline, consistency, and adaptability—qualities essential for students planning to study abroad. Through guidance, encouragement, and structured lessons, he helps learners gain the confidence to achieve their academic and career goals.",
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400&h=500&fit=crop&crop=face",
     },
   ];
 

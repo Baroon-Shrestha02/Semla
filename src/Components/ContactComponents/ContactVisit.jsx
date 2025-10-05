@@ -8,7 +8,7 @@ export default function ContactVisit() {
   const { t } = useTranslation();
 
   const officeHours = [
-    { day: "Sunday - Friday", time: "9:00 AM - 6:00 PM" },
+    { day: "Sunday - Friday", time: "6:00 AM - 6:00 PM" },
     { day: "Saturday", time: "Closed" },
   ];
 
@@ -153,6 +153,7 @@ export default function ContactVisit() {
                       <div key={idx} className="flex justify-between">
                         <span className="text-gray-600">{schedule.day}</span>
                         <span className="text-gray-900 font-medium">
+                          {" "}
                           {schedule.time}
                         </span>
                       </div>
