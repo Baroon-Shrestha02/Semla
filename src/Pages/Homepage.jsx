@@ -9,6 +9,7 @@ import HomeVideo from "../Components/HomeComponents/HomeVideo";
 import HomeUni from "../Components/HomeComponents/HomeUni";
 import HomeSocial from "../Components/HomeComponents/HomeSocial";
 import HomeWhy2 from "../Components/HomeComponents/HomeWhy2";
+import Link from "../Components/HomeComponents/Link";
 
 export default function Homepage() {
   return (
@@ -21,6 +22,7 @@ export default function Homepage() {
       {/* <HomeWhy2 /> */}
 
       <HomeUni />
+      <Link />
       <HomeTestimonials />
       <HomeSocial />
       <HomeContact />

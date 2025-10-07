@@ -76,9 +76,10 @@ export default function HomeVideo() {
                 muted
                 loop
                 playsInline
-                className="h-[120%] w-full object-cover"
+                className="h-[100%] w-full object-cover"
               >
-                <source src="Home/Hero.mp4" type="video/mp4" />
+                {/* <source src="Home/Hero.mp4" type="video/mp4" /> */}
+                <source src="/Home/intro.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

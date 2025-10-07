@@ -6,52 +6,8 @@ import { useTranslation } from "react-i18next";
 const TeamCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useTranslation();
-  const teamData = [
-    {
-      id: 1,
-      name: "Krishna Ghising",
-      role: "Chairman",
-      description:
-        "Beginning his journey as a student in Japan, Mr. Krishna Ghising gained first-hand experience of studying abroad. Over the years, he built strong expertise in SSW, TITP, and visa & immigration processes, with more than 8 years of dedicated experience in the field. He has worked as a Foreigner Requirement Officer as well as a translator and interpreter, establishing valuable connections with many companies and schools in Japan. His strong network and professional background ensure that students and individuals receive reliable guidance and support. With his leadership, applicants can move forward with confidence, knowing that their educational and career opportunities abroad are in trustworthy hands.",
-      image: "About/chairman.jpg",
-    },
-    {
-      id: 2,
-      name: "Dhiraj Lama",
-      role: "Director",
-      description:
-        "With over 5 years of experience residing in Japan, Mr. Dhiraj Lama brings invaluable knowledge about Japanese culture, lifestyle, rules, and regulations. His personal journey abroad allows him to guide students with practical insights that go beyond books and documents, giving them a clear picture of what to expect before starting their future in Japan. As a director, he plays a vital role in bridging the gap between students’ aspirations and real-life experiences. From cultural orientation to day-to-day life guidance, he ensures that students are well-prepared and confident in their decision to study or work abroad. His approachable nature and expertise make the process trustworthy, assuring students and their families that they are in capable hands throughout their journey.",
-      image:
-        "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=400&h=500&fit=crop&crop=face",
-    },
-    {
-      id: 3,
-      name: "Bina Lama",
-      role: "Receptionist",
-      description:
-        "As the first point of contact at the consultancy, Ms. Bina Lama ensures that every student and visitor is welcomed with warmth and professionalism. She plays an important role in creating a friendly and organized environment where students feel comfortable and supported from the very beginning. Beyond handling front-desk responsibilities, she assists in guiding students through initial inquiries and directs them to the right services with clarity and care. Her dedication to communication and coordination helps maintain a smooth flow between the team and clients, ensuring that no student feels uncertain or left behind. Through her approachable nature and efficiency, she contributes greatly to building trust and positive experiences for everyone who walks through the door.",
-      image:
-        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=500&fit=crop&crop=face",
-    },
-    {
-      id: 5,
-      name: "Lakshya Tamang",
-      role: "Instructor",
-      description:
-        "Mr. Lakshya Tamang is a dedicated Japanese language instructor who helps students build a strong foundation in communication skills essential for studying and working in Japan. With a focus on both language proficiency and cultural understanding, his classes are designed to prepare students for real-life situations abroad. He emphasizes interactive learning, practical exercises, and confidence-building techniques, ensuring students can adapt smoothly to new environments. Beyond academics, he motivates learners to embrace Japanese culture and lifestyle, guiding them to succeed not only in their studies but also in their professional and personal journeys overseas.",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
-    },
-    {
-      id: 6,
-      name: "Bimala Ghising",
-      role: "Instructor",
-      description:
-        "Ms. Bimala Ghising brings passion and expertise as a Japanese language instructor, committed to equipping students with the skills they need for success abroad. Her teaching approach combines structured lessons with engaging, interactive activities that make learning both effective and enjoyable. She ensures students not only master grammar and vocabulary but also gain cultural insights that prepare them for life in Japan. By offering personalized guidance and continuous encouragement, she helps learners stay motivated and confident, building the discipline required to achieve their academic and career goals in an international setting.",
-      image:
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=face",
-    },
-  ];
+
+  const teamData = t("about.team.teamData", { returnObjects: true });
 
   // Get visible cards (main + 3 small)
   const getVisibleCards = () => {
